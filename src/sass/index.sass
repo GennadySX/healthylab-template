@@ -1,25 +1,75 @@
 //@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&display=swap')
-
+$brandColor: #2cc0a7
 *
   font-family: "Arimo Bold"
-  .text-color-brand
-    color: #2cc0a7
-  .container
+  .color-brand
+    color: $brandColor
+  .font-regular
+    font-family: "Arimo Regular"
+  .font-italic
+    font-family: "Arimo Italic"
+//  .container-fix
     @media (min-width: 1200px)
       min-width: 1300px
 
 
 
 body
+  header.nav-block
+    .container
+      .navbar
+        .navbar-brand
+          img
+            width: 50px
+          .brand-text-block
+            display: inline
+            small
+              position: relative
+              bottom: 5px
 
-  .navbar
-    .navbar-brand
-      img
-        width: 60px
     .collapse
       .navbar-nav
         .nav-item
           .nav-link
-            font-size: 14px
+            font-size: 13px
             color: black
             text-transform: uppercase
+
+  .block-main
+    width: 100vw
+    height: 750px
+    background-image: url("../img/business-team.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    background-position-y: center
+    .block-cap
+      width: 100vw
+      height: 750px
+      background: linear-gradient(160deg, rgb(246, 247, 248) 35%, rgba(246, 247, 248, 0.7) 100%)
+      .container
+        .b-left
+          max-width: 55%
+          padding-top: 80px
+          .title
+            margin-bottom: 40px
+          .desc
+            font-size: 19px
+          .choose-desc
+            font-size: 22px
+          .choose-block
+            .btn-block
+              margin-bottom: 15px
+              .choose-item
+                color: black
+                background: #ffffff
+                margin-right: 15px
+                font-size: 19px
+                border-radius: 10px
+                padding: 12px
+                padding-left: 20px
+                padding-right: 20px
+                box-shadow: 0 0 15px lightgray
+        .b-right
+          max-width: 45%
+          img
+            width: 70.2rem

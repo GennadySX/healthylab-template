@@ -1,15 +1,61 @@
 * {
   font-family: "Arimo Bold"; }
-  * .text-color-brand {
+  * .color-brand {
     color: #2cc0a7; }
-  @media (min-width: 1200px) {
-    * .container {
-      min-width: 1300px; } }
+  * .font-regular {
+    font-family: "Arimo Regular"; }
+  * .font-italic {
+    font-family: "Arimo Italic"; }
 
-body .navbar .navbar-brand img {
-  width: 60px; }
+body header.nav-block .container .navbar .navbar-brand img {
+  width: 50px; }
 
-body .navbar .collapse .navbar-nav .nav-item .nav-link {
-  font-size: 14px;
+body header.nav-block .container .navbar .navbar-brand .brand-text-block {
+  display: inline; }
+  body header.nav-block .container .navbar .navbar-brand .brand-text-block small {
+    position: relative;
+    bottom: 5px; }
+
+body header.nav-block .collapse .navbar-nav .nav-item .nav-link {
+  font-size: 13px;
   color: black;
   text-transform: uppercase; }
+
+body .block-main {
+  width: 100vw;
+  height: 750px;
+  background-image: url("../img/business-team.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center; }
+  body .block-main .block-cap {
+    width: 100vw;
+    height: 750px;
+    background: -o-linear-gradient(290deg, #f6f7f8 35%, rgba(246, 247, 248, 0.7) 100%);
+    background: linear-gradient(160deg, #f6f7f8 35%, rgba(246, 247, 248, 0.7) 100%); }
+    body .block-main .block-cap .container .b-left {
+      max-width: 55%;
+      padding-top: 80px; }
+      body .block-main .block-cap .container .b-left .title {
+        margin-bottom: 40px; }
+      body .block-main .block-cap .container .b-left .desc {
+        font-size: 19px; }
+      body .block-main .block-cap .container .b-left .choose-desc {
+        font-size: 22px; }
+      body .block-main .block-cap .container .b-left .choose-block .btn-block {
+        margin-bottom: 15px; }
+        body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item {
+          color: black;
+          background: #ffffff;
+          margin-right: 15px;
+          font-size: 19px;
+          border-radius: 10px;
+          padding: 12px;
+          padding-left: 20px;
+          padding-right: 20px;
+          -webkit-box-shadow: 0 0 15px lightgray;
+                  box-shadow: 0 0 15px lightgray; }
+    body .block-main .block-cap .container .b-right {
+      max-width: 45%; }
+      body .block-main .block-cap .container .b-right img {
+        width: 70.2rem; }
