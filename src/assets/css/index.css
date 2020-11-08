@@ -1,0 +1,15 @@
+* {
+  font-family: "Arimo Bold"; }
+  * .text-color-brand {
+    color: #2cc0a7; }
+  @media (min-width: 1200px) {
+    * .container {
+      min-width: 1300px; } }
+
+body .navbar .navbar-brand img {
+  width: 60px; }
+
+body .navbar .collapse .navbar-nav .nav-item .nav-link {
+  font-size: 14px;
+  color: black;
+  text-transform: uppercase; }
