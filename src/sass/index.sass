@@ -4,6 +4,15 @@ $brandColor: #2cc0a7
   font-family: "Arimo Bold"
   .color-brand
     color: $brandColor
+  .bg-brand
+    background: $brandColor
+  .bg-grep
+    background: #f47264
+  .btn-healthy
+    border-radius: 10px
+    padding: 12px
+    padding-left: 30px
+    padding-right: 30px
   .font-regular
     font-family: "Arimo Regular"
   .font-italic
@@ -36,14 +45,12 @@ body
             text-transform: uppercase
 
   .block-main
-    width: 100vw
     height: 750px
     background-image: url("../img/business-team.jpg")
     background-repeat: no-repeat
     background-size: cover
     background-position-y: center
     .block-cap
-      width: 100vw
       height: 750px
       background: linear-gradient(160deg, rgb(246, 247, 248) 35%, rgba(246, 247, 248, 0.7) 100%)
       .container
@@ -56,20 +63,65 @@ body
             font-size: 19px
           .choose-desc
             font-size: 22px
+            margin-bottom: 40px
           .choose-block
             .btn-block
-              margin-bottom: 15px
+              margin-bottom: 30px
               .choose-item
                 color: black
                 background: #ffffff
                 margin-right: 15px
                 font-size: 19px
-                border-radius: 10px
-                padding: 12px
-                padding-left: 20px
-                padding-right: 20px
                 box-shadow: 0 0 15px lightgray
+            .desc-reception
+              font-size: 17px
+              width: 80%
+              margin-bottom: 40px
+            .btn-choose
+              background: $brandColor
+              padding: 20px
+              padding-left: 60px
+              padding-right: 60px
+
         .b-right
           max-width: 45%
           img
-            width: 70.2rem
+            width: 605px
+            position: relative
+            bottom: 50px
+  .block-second
+    padding-top: 80px
+    margin-bottom: 80px
+    .container
+      .block-f
+        .b-left
+          .title-block
+            font-size: 30px
+            text-transform: uppercase
+          .desc-block
+            .desc-f
+              font-size: 18px
+            .desc-b
+              font-size: 17px
+            .desc-fl
+              font-size: 18px
+        .b-right
+          display: flex
+          align-items: flex-end
+          justify-content: flex-end
+          img
+            width: 93%
+  .block-third
+    background: linear-gradient(65deg, rgba(244,114,100,1) 49.3%, rgba(255,255,255,1) 49.4%, rgba(44,192,167,1) 49.5%)
+    padding-top: 40px
+    .container
+      .b-left, .b-right
+        max-width: 45%
+        .text-block
+          .icon
+            margin-bottom: 25px
+          .desc
+            font-size: 16px
+            margin-bottom: 25px
+
+

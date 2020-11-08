@@ -2,6 +2,15 @@
   font-family: "Arimo Bold"; }
   * .color-brand {
     color: #2cc0a7; }
+  * .bg-brand {
+    background: #2cc0a7; }
+  * .bg-grep {
+    background: #f47264; }
+  * .btn-healthy {
+    border-radius: 10px;
+    padding: 12px;
+    padding-left: 30px;
+    padding-right: 30px; }
   * .font-regular {
     font-family: "Arimo Regular"; }
   * .font-italic {
@@ -22,14 +31,12 @@ body header.nav-block .collapse .navbar-nav .nav-item .nav-link {
   text-transform: uppercase; }
 
 body .block-main {
-  width: 100vw;
   height: 750px;
   background-image: url("../img/business-team.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: center; }
   body .block-main .block-cap {
-    width: 100vw;
     height: 750px;
     background: -o-linear-gradient(290deg, #f6f7f8 35%, rgba(246, 247, 248, 0.7) 100%);
     background: linear-gradient(160deg, #f6f7f8 35%, rgba(246, 247, 248, 0.7) 100%); }
@@ -41,21 +48,69 @@ body .block-main {
       body .block-main .block-cap .container .b-left .desc {
         font-size: 19px; }
       body .block-main .block-cap .container .b-left .choose-desc {
-        font-size: 22px; }
+        font-size: 22px;
+        margin-bottom: 40px; }
       body .block-main .block-cap .container .b-left .choose-block .btn-block {
-        margin-bottom: 15px; }
+        margin-bottom: 30px; }
         body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item {
           color: black;
           background: #ffffff;
           margin-right: 15px;
           font-size: 19px;
-          border-radius: 10px;
-          padding: 12px;
-          padding-left: 20px;
-          padding-right: 20px;
           -webkit-box-shadow: 0 0 15px lightgray;
                   box-shadow: 0 0 15px lightgray; }
+      body .block-main .block-cap .container .b-left .choose-block .desc-reception {
+        font-size: 17px;
+        width: 80%;
+        margin-bottom: 40px; }
+      body .block-main .block-cap .container .b-left .choose-block .btn-choose {
+        background: #2cc0a7;
+        padding: 20px;
+        padding-left: 60px;
+        padding-right: 60px; }
     body .block-main .block-cap .container .b-right {
       max-width: 45%; }
       body .block-main .block-cap .container .b-right img {
-        width: 70.2rem; }
+        width: 605px;
+        position: relative;
+        bottom: 50px; }
+
+body .block-second {
+  padding-top: 80px;
+  margin-bottom: 80px; }
+  body .block-second .container .block-f .b-left .title-block {
+    font-size: 30px;
+    text-transform: uppercase; }
+  body .block-second .container .block-f .b-left .desc-block .desc-f {
+    font-size: 18px; }
+  body .block-second .container .block-f .b-left .desc-block .desc-b {
+    font-size: 17px; }
+  body .block-second .container .block-f .b-left .desc-block .desc-fl {
+    font-size: 18px; }
+  body .block-second .container .block-f .b-right {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+    body .block-second .container .block-f .b-right img {
+      width: 93%; }
+
+body .block-third {
+  background: -o-linear-gradient(25deg, #f47264 49.3%, white 49.4%, #2cc0a7 49.5%);
+  background: linear-gradient(65deg, #f47264 49.3%, white 49.4%, #2cc0a7 49.5%);
+  padding-top: 40px; }
+  body .block-third .container .b-left, body .block-third .container .b-right {
+    max-width: 45%; }
+    body .block-third .container .b-left .text-block .icon, body .block-third .container .b-right .text-block .icon {
+      margin-bottom: 25px; }
+    body .block-third .container .b-left .text-block .desc, body .block-third .container .b-right .text-block .desc {
+      font-size: 16px;
+      margin-bottom: 25px; }
