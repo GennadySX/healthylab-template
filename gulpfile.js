@@ -24,6 +24,10 @@ gulp.task('sass', () => gulp.src('src/sass/**/*.sass')
     .pipe(browserSync.reload({stream: true}))
 )
 
+gulp.task('mode', () => gulp.src('src/assets/mode/**/*.css')
+    .pipe(browserSync.reload({stream: true}))
+)
+
 /***JS**/
 
 gulp.task('browserify',  () => browserify()
@@ -88,7 +92,7 @@ gulp.task('bhtml', () => gulp.src('src/*.html')
 
 gulp.task('build', gulp.parallel('clean', 'img', 'sass', 'scripts', 'bcss', 'bjs', 'bfonts', 'bhtml'));
 
-gulp.task('start', gulp.parallel('sass', 'browser-sync', 'scripts','watch'));
+gulp.task('start', gulp.parallel('sass', 'browser-sync', 'scripts', 'mode','watch'));
 
 
 gulp.task('clear', () => cache.clearAll());

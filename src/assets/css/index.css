@@ -1,5 +1,7 @@
 * {
   font-family: "Arimo Bold"; }
+  * .text-underline {
+    text-decoration: underline; }
   * .color-brand {
     color: #2cc0a7; }
   * .bg-brand {
@@ -104,8 +106,8 @@ body .block-second {
       width: 93%; }
 
 body .block-third {
-  background: -o-linear-gradient(25deg, #f47264 49.3%, white 49.4%, #2cc0a7 49.5%);
-  background: linear-gradient(65deg, #f47264 49.3%, white 49.4%, #2cc0a7 49.5%);
+  background: -o-linear-gradient(20deg, #f47264 49.9%, white 50%, #2cc0a7 50.1%);
+  background: linear-gradient(70deg, #f47264 49.9%, white 50%, #2cc0a7 50.1%);
   padding-top: 40px; }
   body .block-third .container .b-left, body .block-third .container .b-right {
     max-width: 45%; }

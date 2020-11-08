@@ -12,12 +12,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="./fonts/arimo.css">
+    <link rel="stylesheet" href="assets/mode/mode.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 <body>
 <header class="nav-block bg-light">
     <div class="container p-0">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="#">
                 <div class="d-flex align-items-center">
                     <img src="./img/icons/logo.png" alt="" class="mr-2">
@@ -97,7 +99,7 @@
                     <p class="desc-fl font-regular">Мы работаем по методу КПТ (когнитивно-поведенческая <br> терапия):
                         разбор конкретных ситуаций и состояний клиента,
                         <br> практические задания и выводы, возможность работать в <br> режиме
-                        <a href="" class="color-brand">асинхронного общения.</a>
+                        <a href="" class="color-brand text-underline">асинхронного общения.</a>
                     </p>
                 </div>
             </div>
@@ -130,10 +132,102 @@
         </div>
     </div>
 </section>
-<section class="block block-fourth">
-
+<div class="how-it-work-container" id="how-it-work-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="d-md-none green-text more-link">
+                    <strong><a href="">Узнать больше про онлайн-психолога</a></strong>
+                </div>
+                <h3>Как работает HealthyLab</h3>
+            </div>
+        </div>
+        <div class="journey-timeline" id="journeyTimeline">
+            <div class="mobile-curve active"></div>
+            <div class="journey__track" id="journeyTrack">
+                <div class="journey__track-highlight"></div>
+            </div>
+            <div class="track" style="height: 453.908px;"></div>
+            <div class="row firststep" data-step="1" id="step1">
+                <div class="col-lg-2 d-none d-lg-block"></div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="journe-block">
+                        <div class="img-wrap">
+                            <img src="assets/img/icons/001.svg" srcset="assets/img/icons/001.svg 1x, assets/img/icons/001.svg 2x, assets/img/icons/001.svg 3x" alt="">
+                        </div>
+                        <div class="title">Подбор специалиста</div>
+                        <div class="description">мы проведём простое анкетирование, которое позволит подобрать
+                            для Вас подходящего специалиста
+                        </div>
+                    </div>
+                    <div class="step-marker step-marker--mobile active"></div>
+                </div>
+                <div class="col-md-6"></div>
+                <div class="step-marker active">1</div>
+            </div>
+            <div class="row secondstep" data-step="1" id="step2">
+                <div class="col-md-6"></div>
+                <div class="col-md-1"></div>
+                <div class="col-lg-4 col-md-5">
+                    <div class="journe-block">
+                        <div class="img-wrap">
+                            <img src="assets/img/icons/002.svg" srcset="assets/img/icons/002.svg 1x, assets/img/icons/002.svg 2x, assets/img/icons/002.svg 3x" alt="">
+                        </div>
+                        <div class="title">Общение в чате</div>
+                        <div class="description">чат, где Вы можете писать своему психологу обо всём, что Вас беспокоит. Специалист отвечает дважды в сутки. Чат полностью безопасен, никто не имеет доступа к этой информации, кроме терапевта и его пациента.
+                        </div>
+                    </div>
+                    <div class="step-marker step-marker--mobile active"></div>
+                </div>
+                <div class="col-lg-1 d-none d-lg-block"></div>
+                <div class="step-marker active">2</div>
+            </div>
+            <div class="row thirdstep" data-step="1" id="step3">
+                <div class="col-lg-2 d-none d-lg-block"></div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="journe-block">
+                        <div class="img-wrap">
+                            <img src="assets/img/icons/003.svg" srcset="assets/img/icons/003.svg 1x, assets/img/icons/003.svg 2x, assets/img/icons/003.svg 3x" alt="">
+                        </div>
+                        <div class="title">Результаты</div>
+                        <div class="description">анкета обратной связи и специально разработанные метрики позволят отмечать прогресс в общении и позитивный эффект терапии.
+                        </div>
+                    </div>
+                    <div class="step-marker step-marker--mobile active"></div>
+                </div>
+                <div class="col-md-6"></div>
+                <div class="step-marker">3</div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="block block-main">
+    <div class="block-cap">
+        <div class="container d-flex justify-content-between">
+            <div class="b-left">
+                <h1 class="title font-regular">Сервис HealthyLab <br> решает все проблемы</h1>
+                <p class="desc font-regular">С нашей помощью Вы сможете повысить продуктивность работы своих коллег и
+                    позаботиться об их психическом здоровье. </p>
+                <p class="choose-desc brand-color color-brand">В изменившемся мире каждому нужна поддержка.
+                    Оставайтесь продуктивным.</p>
+                <div class="choose-block">
+                    <div class="btn-block">
+                        <a href="" class="choose-item btn btn-healthy">Личная польза</a>
+                        <a href="" class="choose-item btn btn-healthy">Польза для бизнеса</a>
+                    </div>
+                    <p class="desc-reception font-regular">Снижение текучести кадров, улучшение коммуникации
+                        сотрудников, повышение рабочей мотивации, повышение лояльности сотрудников.</p>
+                    <div class="btn btn-choose text-light btn-healthy">Начать</div>
+                </div>
+            </div>
+            <div class="b-right">
+                <div class="img-man">
+                    <img src="./img/exhausted-young-businessman.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
-
 
 <!-- jQuery and JS bundle w/ Popper.js -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -142,6 +236,10 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js" integrity="sha512-sR3EKGp4SG8zs7B0MEUxDeq8rw9wsuGVYNfbbO/GLCJ59LBE4baEfQBVsP2Y/h2n8M19YV1mujFANO1yA3ko7Q==" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 <script src="./assets/js/main.min.js"></script>
 </body>
 </html>
