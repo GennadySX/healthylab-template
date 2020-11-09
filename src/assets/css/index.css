@@ -18,19 +18,19 @@
   * .font-italic {
     font-family: "Arimo Italic"; }
 
-body header.nav-block .container .navbar .navbar-brand img {
-  width: 50px; }
-
-body header.nav-block .container .navbar .navbar-brand .brand-text-block {
-  display: inline; }
-  body header.nav-block .container .navbar .navbar-brand .brand-text-block small {
-    position: relative;
-    bottom: 5px; }
-
-body header.nav-block .collapse .navbar-nav .nav-item .nav-link {
-  font-size: 13px;
-  color: black;
-  text-transform: uppercase; }
+body header.nav-block {
+  margin-bottom: 0; }
+  body header.nav-block .container .navbar .navbar-brand img {
+    width: 50px; }
+  body header.nav-block .container .navbar .navbar-brand .brand-text-block {
+    display: inline; }
+    body header.nav-block .container .navbar .navbar-brand .brand-text-block small {
+      position: relative;
+      bottom: 5px; }
+  body header.nav-block .collapse .navbar-nav .nav-item .nav-link {
+    font-size: 13px;
+    color: black;
+    text-transform: uppercase; }
 
 body .block-main {
   height: 750px;
