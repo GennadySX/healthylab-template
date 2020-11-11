@@ -662,7 +662,7 @@ nav .btn {
     position: absolute;
     height: 2px;
     width: 100%;
-    background: #fff;
+    background: #000;
     border-radius: 9px;
     opacity: 1;
     left: 0;
@@ -730,7 +730,7 @@ nav .btn {
     transition: opacity 40ms;
     -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, .25);
     box-shadow: 0 4px 10px rgba(0, 0, 0, .25);
-    background-color: #253a6a
+    background-color: #fff
 }
 
 .mobile-menu .menu-container {
@@ -759,7 +759,7 @@ nav .btn {
 }
 
 .mobile-menu ul li, .mobile-menu ul li a {
-    color: #fff;
+    color: #000;
     font-weight: 700;
     font-size: 20px;
     line-height: 23px
@@ -1880,7 +1880,7 @@ header:not(.darkblue) .btn:active, header:not(.darkblue) .btn:hover {
 
 @media only screen and (max-width: 991px) {
     header {
-        background-color: #253a6a;
+        background-color: #fff;
         color: #fff
     }
 

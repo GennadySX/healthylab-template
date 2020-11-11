@@ -18,46 +18,68 @@
     <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 <body>
-<header class="nav-block bg-light">
-    <div class="container p-0">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#">
-                <div class="d-flex align-items-center">
-                    <img src="./img/icons/logo.png" alt="" class="mr-2">
-                    <div class="brand-text-block">
-                        <h3 class="mb-0 font-weight-bold">HealthlyLab</h3>
-                        <small class="mt-0 color-brand font-weight-bold">для бизнеса</small>
+<div class="header-hero-wrap">
+    <header class="white-text fixed mb-0" style="top: 0px;">
+        <div class="container h-100 header-container">
+            <div class="big-logo-wrap">
+                <div class="logo-icon">
+                    <img src="./img/icons/logo.png"  style="max-width: 45px" alt=""></div>
+                <div class="logo-text">
+                    <small class="mb-0 logo-brand-text text-dark" style="position: relative; top: 8px">HealthyLab</small>
+                    <p class="position-relative logo-desc color-brand">для бизнеса<p/></div>
+            </div>
+            <div class="right-block">
+                <nav class="navbar navbar-expand-lg d-none d-lg-block  navbar-light">
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav mr-auto top-menu">
+                            <li class="nav-item"><a id="menu_master" href="#specialist-container">психологи</a>
+                            </li>
+                            <li class="nav-item text-dark">
+                                <a id="menu_tariff" href="#subscribe-container" >тарифы</a>
+                            </li>
+                            <li class="nav-item text-dark">
+                                <a id="menu_review" href="#reviews-container">отзывы</a>
+                            </li>
+                            <li class="nav-item text-dark">
+                                <a id="menu_faq " href="/faq.php">вопрос-ответ</a>
+                            </li>
+                            <li class="nav-item text-dark">
+                                <a id="menu_download" href="#mobile-app-container">загрузить</a>
+                            </li>
+                            <li class="nav-item text-dark">
+                                <a id="menu_blog" href="/blog.php" >блог</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="js-burger toggler-ico d-block d-lg-none">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="mobile-menu js-mobile-menu">
+            <div class="menu-container">
+                <div class="container">
+                    <ul>
+                        <li><a href="/index.php">Как это работает?</a></li>
+                        <li><a href="/blog.php">Блог</a></li>
+                        <li><a href="/faq.php"> FAQ</a></li>
+                        <li data-toggle="modal" data-target="#loginModal" onclick="ym(46991448,'reachGoal','Click_voyti_1');VK.Goal('initiate_checkout');ga('send', 'event',  'Micro', 'b_login Pushbutton', 'Кнопка Войти'); localStorage.setItem('reg_button','Кнопка Войти')" id="menu_login_button">Войти</li>
+                        <li data-toggle="modal" data-target="#regModal" onclick="ym(46991448,'reachGoal','click_nachat2');VK.Goal('initiate_checkout');ga('send', 'event',  'Micro', 'b_start Pushbutton', 'Кнопка Начать');localStorage.setItem('reg_button','Кнопка Регистрация')" id="menu_register_button">Регистрация</li>
+                    </ul>
+                    <div class="js-burger toggler-ico d-block d-lg-none">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
                 </div>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav mr-auto"></ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item ">
-                        <a class="nav-link text-dark" href="">О нас</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Как это работает</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="">Наши специалисты</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Вопрос-ответ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Контакты</a>
-                    </li>
-                </ul>
             </div>
-        </nav>
-    </div>
-</header>
+        </div>
+    </header>
+
 <section class="block block-main">
     <div class="block-cap">
         <div class="container d-flex justify-content-between">

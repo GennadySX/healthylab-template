@@ -1,23 +1,443 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="description for seo">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="theme-color" content="#abcdcc">
-        <title>HealthlyLab</title>
-        <link rel="stylesheet" href="./assets/css/index.css">
-    </head>
-    <body>
-        <header>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="description for seo">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#abcdcc">
+    <title>HealthlyLab dev</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="./fonts/arimo.css">
+    <link rel="stylesheet" href="assets/mode/mode.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+<body>
+<header class="nav-block bg-light">
+    <div class="container p-0">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">
+                <div class="d-flex align-items-center">
+                    <img src="./img/icons/logo.png" alt="" class="mr-2">
+                    <div class="brand-text-block">
+                        <h3 class="mb-0 font-weight-bold">HealthlyLab</h3>
+                        <small class="mt-0 color-brand font-weight-bold">для бизнеса</small>
+                    </div>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        </header>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto"></ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item ">
+                        <a class="nav-link text-dark" href="">О нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Как это работает</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="">Наши специалисты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Вопрос-ответ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+<section class="block block-main">
+    <div class="block-cap">
+        <div class="container d-flex justify-content-between">
+            <div class="b-left">
+                <h1 class="title font-regular">Сервис HealthyLab <br> решает все проблемы</h1>
+                <p class="desc font-regular">С нашей помощью Вы сможете повысить продуктивность работы своих коллег и
+                    позаботиться об их психическом здоровье. </p>
+                <p class="choose-desc brand-color color-brand">В изменившемся мире каждому нужна поддержка.
+                    Оставайтесь продуктивным.</p>
+                <div class="choose-block">
+                    <div class="btn-block">
+                        <a href="" class="choose-item btn btn-healthy"><p>Личная польза</p> <span class="triangle-part"></span></a>
+                        <a href="" class="choose-item btn btn-healthy"><p>Польза для бизнеса </p><span class="triangle-part"></span></a>
+                    </div>
+                    <p class="desc-reception font-regular">Снижение текучести кадров, улучшение коммуникации
+                        сотрудников, повышение рабочей мотивации, повышение лояльности сотрудников.</p>
+                    <button class="btn btn-choose text-light btn-healthy" data-toggle="modal" data-target="#regModal" id="start_top_button">НАЧАТЬ</button>
+                </div>
+            </div>
+            <div class="b-right">
+                <div class="img-man">
+                    <img src="./img/bg-transparent.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="block block-second">
+    <div class="container">
+        <div class="block-f d-flex justify-content-between m-flexed-block">
+            <div class="b-left">
+                <p class="title-block">О нас</p>
+                <div class="desc-block">
+                    <p class="desc-f font-regular">HealthyLab – онлайн сервис оказания психологической <br> помощи для
+                        Ваших сотрудников. Мы подбираем подходящих
+                        <br> профессионалов, чтобы оказать психологическую помощь <br> через общение в безопасных,
+                        закрытых чатах, сохраняющих
+                        <br> историю переписки</p>
+                    <p class="desc-b mb-2">Безопасность личных данных – один из наших приоритетов.</p>
+                    <p class="desc-fl font-regular">Мы работаем по методу КПТ (когнитивно-поведенческая <br> терапия):
+                        разбор конкретных ситуаций и состояний клиента,
+                        <br> практические задания и выводы, возможность работать в <br> режиме
+                        <a href="" class="color-brand text-underline">асинхронного общения.</a>
+                    </p>
+                </div>
+            </div>
+            <div class="b-right"><img src="./assets/img/pc.png" alt=""></div>
+        </div>
+    </div>
+</section>
+<section class="block block-third ">
+    <div class="container p-0">
+        <div class="d-flex justify-content-between align-items-center m-flexed-block">
+            <div class="b-left ">
+                <div class="text-block text-center p-4 text-light">
+                    <img src="./assets/img/icons/quote.png" alt="" class="icon" />
+                    <p class="font-italic desc">Сложно было адаптироваться к новым условиям работы. <br> Дома нужно было сохранять
+                        продуктивность во время изоляции. Справиться с непростым периодом помогли на
+                        Healthylab» </p>
+                    <p class="author from-date">Игорь, 35 лет, ОТК , г. Москва</p>
+                </div>
+            </div>
+            <div class="b-right">
+                <div class="text-block text-center p-4 text-light">
+                    <img src="./assets/img/icons/quote.png" alt=""  class="icon"  />
+                    <p class="font-italic desc">Я часто волнуюсь, это мешает мне сосредоточиться. Очень мешало в работе:
+                        хватаешься за сто дел, и ни одно не доводишь до конца в срок. Решила поработать с психологом, но
+                        на личные визиты не хватало времени. Здорово, что у нас на работе предложили такой сервис:
+                        мне очень помогло общение со специалистом в онлайн формате» </p>
+                    <p class="author from-date">20 июля 2020г. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="how-it-work-container" id="how-it-work-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="d-md-none green-text more-link">
+                    <strong><a href="">Узнать больше про онлайн-психолога</a></strong>
+                </div>
+                <h3>Как это работает </h3>
+            </div>
+        </div>
+        <div class="journey-timeline" id="journeyTimeline">
+            <div class="mobile-curve active"></div>
+            <div class="journey__track" id="journeyTrack">
+                <div class="journey__track-highlight"></div>
+            </div>
+            <div class="track" ></div>
+            <div class="row firststep" data-step="1" id="step1">
+                <div class="col-lg-2 d-none d-lg-block"></div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="journe-block">
+                        <div class="img-wrap ">
+                            <img src="assets/img/icons/001.svg" style="position: relative; width: 250px; height: 250px" alt="">
+                        </div>
+                        <div class="title mb-2 mt-0">Подбор специалиста</div>
+                        <div class="description font-regular">мы проведём простое анкетирование, которое позволит подобрать
+                            для Вас подходящего специалиста
+                        </div>
+                    </div>
+                    <div class="step-marker step-marker--mobile active"></div>
+                </div>
+                <div class="col-md-6"></div>
+                <div class="step-marker active">1</div>
+            </div>
+            <div class="row secondstep" data-step="1" id="step2">
+                <div class="col-md-6"></div>
+                <div class="col-md-1"></div>
+                <div class="col-lg-4 col-md-5">
+                    <div class="journe-block">
+                        <div class="img-wrap">
+                            <img src="assets/img/icons/002.svg" style="position: relative; width: 250px; height: 250px" alt="">
+                        </div>
+                        <div class="title mb-2 mt-0">Общение в чате</div>
+                        <div class="description font-regular">чат, где Вы можете писать своему психологу обо всём, что Вас беспокоит. Специалист отвечает дважды в сутки. Чат полностью безопасен, никто не имеет доступа к этой информации, кроме терапевта и его пациента.
+                        </div>
+                    </div>
+                    <div class="step-marker step-marker--mobile active"></div>
+                </div>
+                <div class="col-lg-1 d-none d-lg-block"></div>
+                <div class="step-marker active">2</div>
+            </div>
+            <div class="row thirdstep" data-step="1" id="step3">
+                <div class="col-lg-2 d-none d-lg-block"></div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="journe-block">
+                        <div class="img-wrap">
+                            <img src="assets/img/icons/003.svg" style="position: relative; width: 250px; height: 250px" alt="">
+                        </div>
+                        <div class="title mb-2 mt-0">Результаты</div>
+                        <div class="description font-regular">анкета обратной связи и специально разработанные метрики позволят отмечать прогресс в общении и позитивный эффект терапии.
+                        </div>
+                    </div>
+                    <div class="step-marker step-marker--mobile active"></div>
+                </div>
+                <div class="col-md-6"></div>
+                <div class="step-marker">3</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="specialist-container" id="specialist-container">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-7">
+                <div class=" light-text-row mb-4 ">
+                    <div class="hico-text-wrap">
+                        <span class="light-text align-self-center mr-2">Проверенные HealthyLab специалисты</span>
+                        <img src="assets/img/icons/check.png" class="check-icon"  alt="">
+                    </div>
+                </div>
+                <h3>Наши специалисты</h3>
+                <div class="mobile-img-wrap d-md-none">
+                    <img src="assets/img/icons/check.png" class="check-icon"  alt="">
+                </div>
+                <div class="description">
+                    С нами работают профессионалы. Психологи сервиса HealthyLab –
+                    специалисты с многолетним опытом работы и высшим образованием.
+                    Каждый психолог проходит многоуровневый отбор перед тем, как получить доступ к платформе. Выбирая HealthyLab для своей компании, Вы увидите, как повышается продуктивность сотрудников, уменьшается «текучка» кадров и насколько проще можно решать вопросы коммуникации.</div>
+            </div>
+            <div class="col-md-5 d-none d-md-block">
+                <img src="assets/img/img.png" alt="">
+            </div>
+        </div>
 
-        <footer>
+    </div>
+</div>
+<div class="faq-container">
+    <div class="container">
+        <div class="text-center">
+            <h3 >Часто задаваемые вопросы <br> <p class="desc-tab mt-3 text-muted font-italic">Мы здесь, чтобы помочь</p></h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 d-none d-lg-block">
+                <div class="nav flex-column vertical-nav" role="tablist" aria-orientation="vertical">
+                    <div class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="button" aria-controls="v-pills-home" aria-selected="true" >Почему это нужно в бизнесе?</div>
+                    <div class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="button" aria-controls="v-pills-profile" aria-selected="false">Как работает асинхронное общение</div>
+                    <div class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="button" aria-controls="v-pills-profile" aria-selected="false">Почему онлайн консултирование лучше</div>
+                    <div class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="button" aria-controls="v-pills-messages" aria-selected="false">Какие темы мы обсуждаем</div>
+                    <div class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="button" aria-controls="v-pills-messages" aria-selected="false">Какие темы мы не обсуждаем</div>
+                    <div class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="button" aria-controls="v-pills-settings" aria-selected="false" >Как понять, что это работает</div>
+                </div>
 
-        </footer>
-        <script src="./main.min.js"></script>
-    </body>
+            </div>
+            <div class="col-lg-8">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                        <div class="tab-body">
+                            <div id="accordion">
+                                <div class="card">
+                                    <div class="card-header" id="heading-0">
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-0" aria-expanded="true" aria-controls="collapse-0">Почему это нужно в бизнесе?</button>
+                                    </div>
+
+                                    <div id="collapse-0" class="collapse show" aria-labelledby="heading-0" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Общение между психологом из HealthyLab и клиентом происходит с помощью обмена сообщениями. В его основе лежит асинхронная коммуникация, а именно – передача сообщений с задержкой во времени. Количество сообщений, которые ты отправляешь, неограниченно. Психолог отвечает 1-2 раза в день. Исходя из этого старайся четко формулировать свои сообщения и запросы в чате. Ты можешь просматривать сообщения в приватном чате, следить за своим прогрессом, а также брать столько времени на обдумывание, сколько тебе понадобится.                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="heading-1">
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+                                            Психологическое консультирование, учитывающие особенности современной жизни:                                            </button>
+                                    </div>
+
+                                    <div id="collapse-1" class="collapse " aria-labelledby="heading-1" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Онлайн-консультирование – это прекрасный способ для большинства людей получать ценную услугу иначе, чем в её традиционном варианте – сеансе «лицом к лицу». «Психология в чате» является естественным результатом развития технологий. Такой способ наилучшим образом отвечает индивидуальным потребностям и предпочтениям современного человека.
+                                            Каждый пятый человек имеет проблемы с психологическим здоровьем, но только единицы в нашей стране имеют возможность получать психологическую помощь. Множество людей даже не догадываются, какую пользу они могут извлечь даже от кратковременной работы с психологом. Повысить качество жизни, научиться справляться с проблемами и препятствиями, по-настоящему полюбить себя, а также стать намного гармоничнее!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="heading-2">
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-2" aria-expanded="true" aria-controls="collapse-2">
+                                            Что такое онлайн-психолог?                                            </button>
+                                    </div>
+
+                                    <div id="collapse-2" class="collapse " aria-labelledby="heading-2" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Онлайн общение с психологом – это профессиональное консультирование по психологическим вопросам через Интернет с помощью чата, аудио или видео-связи. Эффективность и удобство онлайн-консультирования в мире быстрых сообщений становится отличной альтернативой традиционным “face-to-face” сеансам или необходимым дополнением к сеансам классической терапии. Что такое общение с психологом в чате? Когда мы слышим об онлайн-консультациях по Интернету, то в первую очередь представляем видео-сеанс с психологом, который напоминает обычную встречу в кабинете специалиста. Однако в нашем сервисе также присутствует онлайн-консультирование в чате: клиент и психолог могут обмениваться неограниченным количеством текстовых сообщений через телефон, онлайн-платформу или мобильное приложение. Здесь нет чётко запланированных сессий, поэтому, как правило, намного удобнее сразу оформлять подписку на временной период: две недели и более. С момента принятия решения о необходимости обращения к психологу до начала общения в чате с выбранным вами специалистом может пройти всего лишь несколько минут.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="heading-3">
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-3" aria-expanded="true" aria-controls="collapse-3">
+                                            Почему психологическая помощь в чате так удобна?                                            </button>
+                                    </div>
+
+                                    <div id="collapse-3" class="collapse " aria-labelledby="heading-3" data-parent="#accordion">
+                                        <div class="card-body">
+                                            -Переписка в мессенджерах стала привычным и лидирующим способом коммуникации для многих людей. Поэтому общение с психологом, основанное на обмене текстовыми сообщениями, соответствует образу жизни сегодняшнего дня;
+                                            <br>
+
+                                            -У человека достаточно времени для лучшего осмысления и структурирования своих мыслей;
+                                            <br>
+
+                                            -Многие люди более открыто выражают свои мысли, излагая их в тексте, нежели в разговоре;
+                                            <br>
+
+                                            -Клиентам и психологам нет необходимости делать записи. Можно легко просматривать предыдущие сообщения и наблюдать за прогрессом;
+                                            <br>
+
+                                            -Клиенты чувствуют себя более комфортно и расслабленно, находясь дома.
+                                            <br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                        <div class="tab-body">
+                            <h3>Про асинхронное общение</h3>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                        <div class="tab-body">
+                            <h3>Про психологов</h3>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                        <div class="tab-body">
+                            <h3>Присоединиться к Healthylab (для психологов)</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="single-btn-container d-none d-md-flex bg-brand flex-md-wrap">
+    <h3 class="w-100 text-center mb-4 text-light">Связаться с нами</h3>
+    <button class="btn color-brand bg-white reg-btn mr-3 p-3 pl-5 pr-5" data-toggle="modal" data-target="#regModal"  id="start_bottom_button">Заполнить форму</button>
+    <button class="btn color-brand bg-white reg-btn p-3 pl-5 pr-5" data-toggle="modal" data-target="#regModal"  id="start_bottom_button">обратный звонок</button>
+</div>
+<footer>
+    <div class="container footer">
+        <div class="footer-col first-col">
+            <div class="line social-icons">
+
+                <a href="https://vk.com/healthylabru" class="social">
+                    <i class="fa fa-vk"></i>
+                </a>
+                <a href="http://fb.com/healthylab.ru" class="social">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="https://instagram.com/healthylab.ru" class="social">
+                    <i class="fa fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/79150360594" class="social">
+                    <i class="fa fa-whatsapp"></i>
+                </a>
+            </div>
+            <div class="line">
+                <div class="big-logo-wrap">
+                    <div class="logo-icon">
+                        <img src="./img/icons/logo-light.png"  alt=""></div>
+                    <div class="logo-text">
+                        <small class="mb-0 logo-brand-text">HealthyLab</small>
+                        <p class="position-relative logo-desc">для бизнеса<p/></div>
+                </div>
+            </div>
+            <div class="line">
+                Москва, Тимура Фрунзе 11
+            </div>
+            <div class="line">
+            </div>
+
+            <div class="line">
+            </div>
+        </div>
+
+
+        <div class="footer-col second-col">
+            <div class="line">
+                <h5>Полезные ссылки</h5>
+            </div>
+            <div class="line">
+                <a href="#" style="text-decoration:none; color:#eee" lass="font-regular">FAQ</a>
+            </div>
+            <div class="line">
+                <a href="https://msph.ru/uslugi/neotlozhnaya-psikhologicheskaya-pomoshch" class="font-regular" style="text-decoration:none; color:#eee">
+                    Срочная государственная психологическая помощь
+                </a>
+            </div>
+        </div>
+        <div class="footer-col third-col">
+            <div class="line">
+                <h5>Разное</h5>
+            </div>
+            <div class="line">
+                <a href="#" style="text-decoration:none; color:#eee" class="font-regular ">
+                    Политика конфиденциальности и публичная оферта
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="modal" tabindex="-1" role="dialog" id="regModal">
+    <div class="modal-dialog forms-modal" role="document">
+        <div class="modal-content">
+            <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+                <span></span>
+                <span></span>
+            </button>
+            <div class="modal-body">
+                <div class="modal-head">Консультация</div>
+                <form action="" id="loginForm">
+                    <div class="group">
+                        <input type="text" class="font-regular" required="required"  placeholder="Имя">
+                    </div>
+                    <div class="group">
+                        <input type="tel" class="font-regular" required="required" placeholder="Телефон">
+                    </div>
+                    <div class="group">
+                        <input type="email" class="font-regular" required="required"  placeholder="E-mail" >
+                    </div>
+                    <button class="btn bg-brand btn-healthy text-light pl-5 pr-5" form="loginForm" type="submit"  id="login_button" style="margin:50px auto 0px auto;display:block">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- jQuery and JS bundle w/ Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js" integrity="sha512-sR3EKGp4SG8zs7B0MEUxDeq8rw9wsuGVYNfbbO/GLCJ59LBE4baEfQBVsP2Y/h2n8M19YV1mujFANO1yA3ko7Q==" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+<script src="./assets/js/main.min.js"></script>
+</body>
 </html>
