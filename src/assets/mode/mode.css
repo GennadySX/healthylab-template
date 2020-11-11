@@ -373,13 +373,13 @@ h6 {
 
 #accordion .card .card-header [data-toggle=collapse]:after {
     font-family: "HealthyFont";
-    font-size: 30px;
+    font-size: 20px;
     position: absolute;
     right: 0;
     top: 0;
-    content: "";
-    width: 30px;
-    height: 30px;
+    content: "⮝";
+    width: 20px;
+    height: 20px;
     color: #2cc0a7;
     -webkit-transform: rotate(0deg) !important;
     -ms-transform: rotate(0deg) !important;
@@ -1053,12 +1053,6 @@ select.form-control {
 
     #regModal .modal-dialog {
         width: 100%;
-        max-width: 850px
-    }
-
-    #regModal .modal-dialog .modal-content {
-        width: 100%;
-        max-width: none
     }
 
     #regModal .modal-dialog .modal-content .reg-modal-image-block {
@@ -1070,8 +1064,6 @@ select.form-control {
     }
 
     #regModal .modal-dialog .modal-content .modal-body {
-        max-width: 50%;
-        margin-left: auto
     }
 }
 
@@ -1944,7 +1936,7 @@ header.fixed {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .14)
 }
 
-.vertical-nav a.active, header.fixed .logo-icon .hico {
+.vertical-nav a.active, .vertical-nav div.active, header.fixed .logo-icon .hico {
     color: #2cc0a7
 }
 
@@ -2178,6 +2170,7 @@ header.fixed .toggler-ico span {
 }
 
 .specialist-container {
+    background: #f5f6f8;
     padding: 90px 0 100px
 }
 
@@ -2365,7 +2358,6 @@ header.fixed .toggler-ico span {
 }
 
 .how-it-work-container {
-    background: #f5f6f8;
     padding: 70px 0
 }
 
@@ -2409,9 +2401,7 @@ header.fixed .toggler-ico span {
         max-width: 332px
     }
 
-    .journe-block .img-wrap {
-        display: none
-    }
+
 
     .journe-block .title {
         font-weight: 700;
@@ -3189,7 +3179,7 @@ footer .footer .footer-col.second-col .line {
 }
 
 footer .footer .footer-col.third-col .line {
-    max-width: 250px
+    max-width: 275px
 }
 
 @media only screen and (max-width: 1200px) {
@@ -3380,7 +3370,7 @@ footer .footer .footer-col.third-col .line {
     max-width: 780px
 }
 
-.vertical-nav a {
+.vertical-nav div {
     padding: 25px 0;
     font-size: 17px;
     font-weight: 700;

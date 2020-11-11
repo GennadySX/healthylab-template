@@ -21,9 +21,11 @@
 body header.nav-block {
   margin-bottom: 0; }
   body header.nav-block .container .navbar .navbar-brand img {
-    width: 50px; }
+    width: 45px; }
   body header.nav-block .container .navbar .navbar-brand .brand-text-block {
     display: inline; }
+    body header.nav-block .container .navbar .navbar-brand .brand-text-block h3 {
+      font-size: 30px; }
     body header.nav-block .container .navbar .navbar-brand .brand-text-block small {
       position: relative;
       bottom: 5px; }
@@ -55,12 +57,36 @@ body .block-main {
       body .block-main .block-cap .container .b-left .choose-block .btn-block {
         margin-bottom: 30px; }
         body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item {
+          max-height: 54px;
           color: black;
           background: #ffffff;
           margin-right: 15px;
-          font-size: 19px;
           -webkit-box-shadow: 0 0 15px lightgray;
-                  box-shadow: 0 0 15px lightgray; }
+                  box-shadow: 0 0 15px lightgray;
+          -webkit-transition: -webkit-box-shadow 0.5s ease-in-out;
+          transition: -webkit-box-shadow 0.5s ease-in-out;
+          -o-transition: box-shadow 0.5s ease-in-out;
+          transition: box-shadow 0.5s ease-in-out;
+          transition: box-shadow 0.5s ease-in-out, -webkit-box-shadow 0.5s ease-in-out; }
+          body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item p {
+            font-size: 19px; }
+          body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item .triangle-part {
+            height: 10px;
+            position: relative;
+            border-style: solid;
+            border-width: 15px 20px 0 20px;
+            border-color: white transparent transparent transparent;
+            z-index: 9;
+            top: 5px;
+            opacity: 0;
+            -webkit-transition: opacity 0.5s ease-in-out;
+            -o-transition: opacity 0.5s ease-in-out;
+            transition: opacity 0.5s ease-in-out; }
+          body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item:hover {
+            -webkit-box-shadow: -10px 20px 25px lightgray 0.3;
+                    box-shadow: -10px 20px 25px lightgray 0.3; }
+            body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item:hover .triangle-part {
+              opacity: 1; }
       body .block-main .block-cap .container .b-left .choose-block .desc-reception {
         font-size: 17px;
         width: 80%;
@@ -75,9 +101,12 @@ body .block-main {
       body .block-main .block-cap .container .b-right img {
         width: 605px;
         position: relative;
-        bottom: 50px; }
+        bottom: -3px;
+        z-index: 1; }
 
 body .block-second {
+  position: relative;
+  z-index: 99;
   padding-top: 80px;
   margin-bottom: 80px; }
   body .block-second .container .block-f .b-left .title-block {
@@ -116,3 +145,50 @@ body .block-third {
     body .block-third .container .b-left .text-block .desc, body .block-third .container .b-right .text-block .desc {
       font-size: 16px;
       margin-bottom: 25px; }
+
+body .card-header {
+  background: none; }
+  body .card-header .btn-link {
+    outline: none; }
+    body .card-header .btn-link:focus, body .card-header .btn-link:hover {
+      outline: none !important;
+      border: none !important;
+      -webkit-box-shadow: none;
+              box-shadow: none; }
+
+body .faq-container .card {
+  border: none; }
+  body .faq-container .card .card-body {
+    font-family: "Arimo Regular"; }
+
+body #regModal .group {
+  margin-bottom: 25px; }
+  body #regModal .group input {
+    -webkit-box-shadow: inset 0 1px 5px gray;
+            box-shadow: inset 0 1px 5px gray;
+    border-radius: 10px;
+    border: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px; }
+    body #regModal .group input:hover, body #regModal .group input:focus {
+      border: none; }
+
+body #regModal .reg-btn {
+  border-radius: 10px;
+  padding: 15px;
+  padding-left: 25px;
+  padding-right: 25px; }
+
+@media screen and (max-width: 560px) {
+  .mobile-curve, .step-marker, .journey__track, .track {
+    display: none !important; }
+  .check-icon {
+    width: 35px !important; }
+  .m-flexed-block {
+    -webkit-flex-wrap: wrap !important;
+        -ms-flex-wrap: wrap !important;
+            flex-wrap: wrap !important; }
+    .m-flexed-block .b-left, .m-flexed-block .b-right {
+      width: 100%;
+      max-width: 100% !important; } }

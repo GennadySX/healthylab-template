@@ -198,5 +198,12 @@ $(document).ready(function () {
         }
     });
 
+
     tarifSelectHandler();
+})
+
+$('window').ready(() => {
+    $('.faq-container a').click((e) => {
+      e.preventDefault()
+    })
 })

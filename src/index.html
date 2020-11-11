@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="description" content="description for seo">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -68,17 +68,17 @@
                     Оставайтесь продуктивным.</p>
                 <div class="choose-block">
                     <div class="btn-block">
-                        <a href="" class="choose-item btn btn-healthy">Личная польза</a>
-                        <a href="" class="choose-item btn btn-healthy">Польза для бизнеса</a>
+                        <a href="" class="choose-item btn btn-healthy"><p>Личная польза</p> <span class="triangle-part"></span></a>
+                        <a href="" class="choose-item btn btn-healthy"><p>Польза для бизнеса </p><span class="triangle-part"></span></a>
                     </div>
                     <p class="desc-reception font-regular">Снижение текучести кадров, улучшение коммуникации
                         сотрудников, повышение рабочей мотивации, повышение лояльности сотрудников.</p>
-                    <div class="btn btn-choose text-light btn-healthy">Начать</div>
+                    <button class="btn btn-choose text-light btn-healthy" data-toggle="modal" data-target="#regModal" id="start_top_button">НАЧАТЬ</button>
                 </div>
             </div>
             <div class="b-right">
                 <div class="img-man">
-                    <img src="./img/exhausted-young-businessman.png" alt="">
+                    <img src="./img/bg-transparent.png" alt="">
                 </div>
             </div>
         </div>
@@ -86,7 +86,7 @@
 </section>
 <section class="block block-second">
     <div class="container">
-        <div class="block-f d-flex justify-content-between">
+        <div class="block-f d-flex justify-content-between m-flexed-block">
             <div class="b-left">
                 <p class="title-block">О нас</p>
                 <div class="desc-block">
@@ -109,7 +109,7 @@
 </section>
 <section class="block block-third ">
     <div class="container p-0">
-        <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex justify-content-between align-items-center m-flexed-block">
             <div class="b-left ">
                 <div class="text-block text-center p-4 text-light">
                     <img src="./assets/img/icons/quote.png" alt="" class="icon" />
@@ -139,7 +139,7 @@
                 <div class="d-md-none green-text more-link">
                     <strong><a href="">Узнать больше про онлайн-психолога</a></strong>
                 </div>
-                <h3>Как работает HealthyLab</h3>
+                <h3>Как работает </h3>
             </div>
         </div>
         <div class="journey-timeline" id="journeyTimeline">
@@ -147,7 +147,7 @@
             <div class="journey__track" id="journeyTrack">
                 <div class="journey__track-highlight"></div>
             </div>
-            <div class="track" style="height: 453.908px;"></div>
+            <div class="track" ></div>
             <div class="row firststep" data-step="1" id="step1">
                 <div class="col-lg-2 d-none d-lg-block"></div>
                 <div class="col-md-6 col-lg-4">
@@ -203,18 +203,17 @@
 </div>
 <div class="specialist-container" id="specialist-container">
     <div class="container">
-
         <div class="row align-items-center">
             <div class="col-md-7">
                 <div class=" light-text-row mb-4 ">
                     <div class="hico-text-wrap">
                         <span class="light-text align-self-center mr-2">Проверенные HealthyLab специалисты</span>
-                        <img src="assets/img/icons/check.png"  alt="">
+                        <img src="assets/img/icons/check.png" class="check-icon"  alt="">
                     </div>
                 </div>
                 <h3>Наши специалисты</h3>
                 <div class="mobile-img-wrap d-md-none">
-                    <img src="assets/img/icons/check.png"  alt="">
+                    <img src="assets/img/icons/check.png" class="check-icon"  alt="">
                 </div>
                 <div class="description">
                     С нами работают профессионалы. Психологи сервиса HealthyLab –
@@ -231,25 +230,27 @@
 <div class="faq-container">
     <div class="container">
         <div class="row">
-            <div class="col-lg-3 d-none d-lg-block">
+            <div class="col-lg-4 d-none d-lg-block">
                 <div class="nav flex-column vertical-nav" role="tablist" aria-orientation="vertical">
-                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Как работает сервис?</a>
-                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Про асинхронное общение</a>
-                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Про психологов</a>
-                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Присоединиться к Healthylab (для психологов)</a>
+                    <div class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="button" aria-controls="v-pills-home" aria-selected="true" >Почему это нужно в бизнесе?</div>
+                    <div class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="button" aria-controls="v-pills-profile" aria-selected="false">Как работает асинхронное общение</div>
+                    <div class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="button" aria-controls="v-pills-profile" aria-selected="false">Почему онлайн консултирование лучше</div>
+                    <div class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="button" aria-controls="v-pills-messages" aria-selected="false">Какие темы мы обсуждаем</div>
+                    <div class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="button" aria-controls="v-pills-messages" aria-selected="false">Какие темы мы не обсуждаем</div>
+                    <div class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="button" aria-controls="v-pills-settings" aria-selected="false" >Как понять, что это работает</div>
                 </div>
 
             </div>
-            <div class="col-lg-9">
+            <div class="col-lg-8">
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                         <div class="tab-body">
-                            <h3>Как работает сервис?</h3>
+                            <h3 >Часто задаваемые вопросы? <br> <p class="desc-tab">Мы здесь, чтобы помочь</p></h3>
+
                             <div id="accordion">
                                 <div class="card">
                                     <div class="card-header" id="heading-0">
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-0" aria-expanded="true" aria-controls="collapse-0">
-                                            Как происходит общение в чате?                                            </button>
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-0" aria-expanded="true" aria-controls="collapse-0">Почему это нужно в бизнесе?</button>
                                     </div>
 
                                     <div id="collapse-0" class="collapse show" aria-labelledby="heading-0" data-parent="#accordion">
@@ -325,16 +326,16 @@
                         <div class="tab-body">
                             <h3>Присоединиться к Healthylab (для психологов)</h3>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="single-btn-container d-none d-md-flex bg-brand">
-    <button class="btn color-brand bg-white fat-btn mr-2 " data-toggle="modal" data-target="#regModal" onclick="ym(46991448,'reachGoal','Click_begin_bottom_1');VK.Goal('initiate_checkout');ga('send', 'event',  'Micro', 'b_go Pushbutton', 'Кнопка Начать Нижний');localStorage.setItem('reg_button','Кнопка Начать Нижний')" id="start_bottom_button">начать</button>
-    <button class="btn color-brand bg-white fat-btn " data-toggle="modal" data-target="#regModal" onclick="ym(46991448,'reachGoal','Click_begin_bottom_1');VK.Goal('initiate_checkout');ga('send', 'event',  'Micro', 'b_go Pushbutton', 'Кнопка Начать Нижний');localStorage.setItem('reg_button','Кнопка Начать Нижний')" id="start_bottom_button">начать</button>
+<div class="single-btn-container d-none d-md-flex bg-brand flex-md-wrap">
+    <h3 class="w-100 text-center mb-4 text-light">Связаться с нами</h3>
+    <button class="btn color-brand bg-white reg-btn mr-3 " data-toggle="modal" data-target="#regModal"  id="start_bottom_button">Заполнить форму</button>
+    <button class="btn color-brand bg-white reg-btn " data-toggle="modal" data-target="#regModal"  id="start_bottom_button">обратный звонок</button>
 </div>
 <footer>
     <div class="container footer">
@@ -361,26 +362,7 @@
                 </div>
             </div>
             <div class="line">
-                ИП Колосов А.В.
-            </div>
-            <div class="line">
-                ИНН 770475092568
-            </div>
-            <div class="line">
-                ОГРНИП 318774600702350
-            </div>
-            <div class="line">
-                Россия, город Москва, ул. Тимура Фрунзе, дом 11, офис 118Б
-            </div>
-            <div class="line">
-                Телефон: +79859855555            </div>
-            <div class="line">
-                Email: kolosov@healthylab.ru            </div>
-            <div class="line">
-                Оплата банковскими картами осуществляется через АО «АЛЬФА-БАНК». К оплате принимаются карты VISA, MasterCard, МИР.
-            </div>
-            <div class="line">
-                <a href="/payment.pdf" style="color:#eee;">Подробности</a>
+                Москва, Тимура Фрунзе 11
             </div>
             <div class="line">
             </div>
@@ -395,10 +377,10 @@
                 <h5>Полезные ссылки</h5>
             </div>
             <div class="line">
-                <a href="/faq.php" style="text-decoration:none; color:#eee">FAQ</a>
+                <a href="#" style="text-decoration:none; color:#eee" lass="font-regular">FAQ</a>
             </div>
             <div class="line">
-                <a href="https://msph.ru/uslugi/neotlozhnaya-psikhologicheskaya-pomoshch" style="text-decoration:none; color:#eee">
+                <a href="https://msph.ru/uslugi/neotlozhnaya-psikhologicheskaya-pomoshch" class="font-regular" style="text-decoration:none; color:#eee">
                     Срочная государственная психологическая помощь
                 </a>
             </div>
@@ -408,23 +390,39 @@
                 <h5>Разное</h5>
             </div>
             <div class="line">
-                <a href="/blog.php" style="text-decoration:none; color:#eee">
-                    Блог
-                </a>
-            </div>
-            <div class="line">
-                <a href="/personal_data.pdf" style="text-decoration:none; color:#eee">
-                    Согласие на обработку персональных данных
-                </a>
-            </div>
-            <div class="line">
-                <a href="/agreement.pdf" style="text-decoration:none; color:#eee">
-                    Пользовательское соглашение
+                <a href="#" style="text-decoration:none; color:#eee" class="font-regular ">
+                    Политика конфиденциальности и публичная оферта
                 </a>
             </div>
         </div>
     </div>
 </footer>
+<div class="modal" tabindex="-1" role="dialog" id="regModal">
+    <div class="modal-dialog forms-modal" role="document">
+        <div class="modal-content">
+            <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+                <span></span>
+                <span></span>
+            </button>
+            <div class="modal-body">
+                <div class="modal-head">Консультация</div>
+                <form action="" id="loginForm">
+                    <div class="group">
+                        <input type="text" required="required"  placeholder="Имя">
+                    </div>
+                    <div class="group">
+                        <input type="tel" required="required" placeholder="Телефон">
+                    </div>
+                    <div class="group">
+                        <input type="email" required="required"  placeholder="E-mail" >
+                    </div>
+                    <button class="btn bg-brand btn-healthy text-light pl-5 pr-5" form="loginForm" type="submit"  id="login_button" style="margin:50px auto 0px auto;display:block">Отправить</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
 <!-- jQuery and JS bundle w/ Popper.js -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
