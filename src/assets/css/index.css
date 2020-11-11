@@ -180,6 +180,10 @@ body #regModal .reg-btn {
   padding-left: 25px;
   padding-right: 25px; }
 
+body footer .big-logo-wrap .logo-brand-text {
+  position: relative;
+  top: 5px; }
+
 @media screen and (max-width: 560px) {
   .mobile-curve, .step-marker, .journey__track, .track {
     display: none !important; }

@@ -3254,7 +3254,7 @@ footer .footer .footer-col.third-col .line {
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    margin-bottom: 30px !important
+    margin-bottom: 10px !important
 }
 
 .social-icons .social {
@@ -3497,11 +3497,11 @@ footer .footer .footer-col.third-col .line {
 
 
 #step2 .step-marker {
-    top: 160px;
+    top: 100px;
 }
 
 #step3 .step-marker {
-    top: 150px;
+    top: 100px;
 }
 
 @media only screen and (max-width: 767px) {
