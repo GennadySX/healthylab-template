@@ -1,19 +1,6 @@
 let resizetimer = 0;
 
-const anchors = document.querySelectorAll('a[href*="#"]')
 
-for (let anchor of anchors) {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault()
-
-        const blockID = anchor.getAttribute('href').substr(1)
-
-        const yOffset = -1 * ($('header').height() + $('.topline').height());
-        const element = document.getElementById(blockID)
-        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({top: y, behavior: 'smooth'});
-    })
-}
 
 const headerFixer = (scrollEvent) => {
     const curScroll = $(document).scrollTop();
@@ -202,8 +189,16 @@ $(document).ready(function () {
     tarifSelectHandler();
 })
 
-$('window').ready(() => {
+$(document).ready(() => {
     $('.faq-container a').click((e) => {
       e.preventDefault()
     })
+
+    $(document).on('click', 'a[href^="#"]', function (event) {
+        event.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+    });
 })

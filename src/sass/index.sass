@@ -75,7 +75,9 @@ body
 
           .img-man.mobile
             img
-              width: 400px
+              width: 90vw
+              position: relative
+              bottom: 10px
 
           .title
             margin-bottom: 40px
@@ -234,7 +236,7 @@ body
         top: 5px
 
 
-@media screen and (max-width: 560px)
+@media screen and (max-width: 1005px)
   .mobile-curve, .step-marker, .journey__track, .track
     display: none !important
   .check-icon
@@ -274,19 +276,21 @@ body
           width: 100%
 
           .btn-block
+            display: flex
             .choose-item
-              max-width: 45%
-              max-height: 70px !important
+              max-height: unset !important
               border-radius: 15px
-              padding-top: 5px
               background: #eff1f4 !important
               box-shadow: none !important
-
               &:hover
                 background: white
 
               p
                 font-size: 19px !important
+                align-self: center
+                margin-bottom: 0
+              span
+                display: none
 
           .desc-reception
             position: relative
@@ -297,8 +301,8 @@ body
             transform: translateX(-50%)
       .b-right
         display: none !important
-  #on_nas
-    margin-top: 590px
+  #o_nas
+    margin-top: 700px
 
     .title-block
       text-align: center
