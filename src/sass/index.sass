@@ -83,6 +83,7 @@ body
             .rx
               display: none
 
+
           .desc
             font-size: 19px
 
@@ -261,8 +262,7 @@ body
           font-size: 2rem
           top: 0
           font-family: "Arimo Bold"
-          .rx
-            display: inherit !important
+
 
         .desc
           margin-top: 30px
@@ -303,7 +303,7 @@ body
       .b-right
         display: none !important
   #o_nas
-    margin-top: 700px
+    margin-top: 600px
 
     .title-block
       text-align: center
@@ -373,3 +373,27 @@ body
       margin-bottom: 20px
       width: 70% !important
       padding: 20px !important
+
+@media screen and (max-width: 500px)
+  .block-main
+    .block-cap
+      .title
+        .rx
+          display: inherit  !important
+@media screen and (min-width: 500px) and (max-width: 768px)
+  .block-main
+    .block-cap
+      .img-man
+        img
+          margin-top: 35px
+@media screen and (min-width: 768px) and (max-width: 1005px)
+  .block-main
+    .block-cap
+      max-height: 727px
+      .img-man
+        img
+          width: 450px !important
+          margin-top: 30px
+      .btn-block
+        justify-content: space-around
+

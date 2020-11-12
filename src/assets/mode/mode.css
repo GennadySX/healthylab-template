@@ -459,7 +459,6 @@ textarea {
 
 input, textarea {
     background: 0 0;
-    color: #909298;
     font-size: 18px;
     padding: 10px;
     display: block;
@@ -3212,7 +3211,7 @@ footer .footer .footer-col.third-col .line {
     }
 }
 
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 1005px) {
     footer .footer .big-logo-wrap {
         display: none
     }
