@@ -1,0 +1,19 @@
+@font-face{
+    font-family: "Arimo Bold";
+    src: url("./Arimo-Bold.ttf") format("truetype");
+}
+
+@font-face{
+    font-family: "Arimo Bold Italic";
+    src: url("./Arimo-BoldItalic.ttf") format("truetype");
+}
+
+@font-face{
+    font-family: "Arimo Italic";
+    src: url("./Arimo-Italic.ttf") format("truetype");
+}
+
+@font-face{
+    font-family: "Arimo Regular";
+    src: url("./Arimo-Regular.ttf") format("truetype");
+}
