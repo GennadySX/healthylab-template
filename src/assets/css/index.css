@@ -48,11 +48,12 @@ body .block-main {
       max-width: 55%;
       padding-top: 80px; }
       body .block-main .block-cap .container .b-left .img-man.mobile img {
-        width: 90vw;
-        position: relative;
-        bottom: 10px; }
+        width: 350px;
+        position: relative; }
       body .block-main .block-cap .container .b-left .title {
         margin-bottom: 40px; }
+        body .block-main .block-cap .container .b-left .title .rx {
+          display: none; }
       body .block-main .block-cap .container .b-left .desc {
         font-size: 19px; }
       body .block-main .block-cap .container .b-left .choose-desc {
@@ -201,17 +202,20 @@ body footer .big-logo-wrap .logo-brand-text {
       width: 100%;
       max-width: 100% !important; }
   .block-main {
-    height: 650px !important; }
+    height: unset !important; }
     .block-main .block-cap {
-      height: 650px !important; }
+      height: unset !important;
+      max-height: 605px; }
       .block-main .block-cap .b-left {
         max-width: 100% !important;
         text-align: center;
         padding-top: 30px !important; }
         .block-main .block-cap .b-left .title {
-          font-size: 2.5rem;
+          font-size: 2rem;
           top: 0;
           font-family: "Arimo Bold"; }
+          .block-main .block-cap .b-left .title .rx {
+            display: inherit !important; }
         .block-main .block-cap .b-left .desc {
           margin-top: 30px; }
         .block-main .block-cap .b-left .choose-desc {
