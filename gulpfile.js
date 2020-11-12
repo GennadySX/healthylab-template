@@ -20,13 +20,11 @@ gulp.task('sass', () => gulp.src('src/sass/**/*.sass')
     .pipe(sass().on('error', sass.logError))
     //.pipe(cssnano())
     .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7']), {cascade: true})
-    .pipe(gulp.dest('src/assets/css'))
+    .pipe(gulp.dest('src/css'))
     .pipe(browserSync.reload({stream: true}))
 )
 
-gulp.task('mode', () => gulp.src('src/assets/mode/**/*.css')
-    .pipe(browserSync.reload({stream: true}))
-)
+
 
 /***JS**/
 
@@ -35,25 +33,31 @@ gulp.task('browserify',  () => browserify()
         .require('bootstrap')
         .bundle()
         .pipe(source('libs.min.js'))
-        .pipe(gulp.dest('src/assets/js')))
+        .pipe(gulp.dest('src/js')))
 
 
-gulp.task('scripts', () => gulp.src('src/js/**/*.js')
+gulp.task('scripts', () => gulp.src('src/js_dev/**/*.js')
     .pipe(uglifyES())
     .pipe(concat('main.min.js'))
     .pipe(browserSync.reload({stream: true}))
-    .pipe(gulp.dest('src/assets/js')));
+    .pipe(gulp.dest('src/js')));
 
 
 
 /***CSS_LIBS***/
+gulp.task('css', () => gulp.src('src/mode/**/*.css')
+    .pipe(cssnano())
+    .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7']), {cascade: true})
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('src/css'))
+);
 
-gulp.task('css-libs', () => gulp.src('src/sass/**/*.+(scss | scss)')
+gulp.task('css-libs', () => gulp.src('src/sass/**/*.+(scss | scss )')
     .pipe(sass())
     .pipe(cssnano())
     .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7']), {cascade: true})
     .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('src/assets/css'))
+    .pipe(gulp.dest('src/css'))
 );
 
 
@@ -61,13 +65,13 @@ gulp.task('browser-sync', () => browserSync.init({server: {baseDir: "src"}, noti
 
 gulp.task('html', () => gulp.src('src/*.html').pipe(browserSync.reload({stream: true})));
 
-gulp.task('img', () => gulp.src('src/assets/img/**/*').pipe(cache(imagemin({
+gulp.task('img', () => gulp.src('src/img/**/*').pipe(cache(imagemin({
     interlaced: true,
     progressive: true,
     svgoPlugins: [{removeViewBox: false}],
     use: [pngquant()]
 })))
-    .pipe(gulp.dest('dist/assets/img')));
+    .pipe(gulp.dest('dist/img')));
 
 gulp.task('watch', () => {
     gulp.watch('./src/sass/**/*.+(sass|scss)', gulp.series('sass'));
@@ -77,11 +81,11 @@ gulp.task('watch', () => {
 
 gulp.task('clean', async () => del.sync('dist'));
 
-gulp.task('bcss', () => gulp.src(['src/assets/css/*.css', 'src/assets/css/*.min.css'])
+gulp.task('bcss', () => gulp.src(['src/mode/*.css', 'src/css/*.css', 'src/css/*.min.css'])
     .pipe(gulp.dest('dist/css')));
 
-gulp.task('bfonts', () => gulp.src('src/assets/fonts/**/*')
-    .pipe(gulp.dest('dist/assets/fonts')));
+gulp.task('bfonts', () => gulp.src('src/fonts/**/*')
+    .pipe(gulp.dest('dist/fonts')));
 
 gulp.task('bjs', () => gulp.src('src/js/**/*.js')
     .pipe(gulp.dest('dist/js')));
@@ -92,7 +96,7 @@ gulp.task('bhtml', () => gulp.src('src/*.html')
 
 gulp.task('build', gulp.parallel('clean', 'img', 'sass', 'scripts', 'bcss', 'bjs', 'bfonts', 'bhtml'));
 
-gulp.task('start', gulp.parallel('sass', 'browser-sync', 'scripts', 'mode','watch'));
+gulp.task('start', gulp.parallel('sass', 'browser-sync', 'scripts', 'css','watch'));
 
 
 gulp.task('clear', () => cache.clearAll());
