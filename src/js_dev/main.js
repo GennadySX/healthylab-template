@@ -211,4 +211,9 @@ $(document).ready(() => {
             scrollTop: $($.attr(this, 'href')).offset().top
         }, 500);
     });
+
+
+    $('.limitly-link-pill').on('click', () => {
+        $('#v-pills-not-discussion-tab').trigger('click')
+    })
 })

@@ -179,6 +179,9 @@ body .faq-container .card {
   body .faq-container .card .card-body {
     font-family: "Arimo Regular"; }
 
+body .faq-container .limitly-link-pill {
+  cursor: pointer; }
+
 body #regModal .group {
   margin-bottom: 25px; }
   body #regModal .group input {
