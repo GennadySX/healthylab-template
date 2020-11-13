@@ -80,6 +80,7 @@ body
 
           .title
             margin-bottom: 40px
+
             .rx
               display: none
 
@@ -124,16 +125,25 @@ body
                     opacity: 1
 
 
-            .desc-reception
-              font-size: 17px
-              width: 80%
-              margin-bottom: 40px
 
+            .desc-block-col
+              height: 0
+              transition:  height 0.7s linear
+              .desc-reception
+                font-size: 17px
+                width: 80%
+                position: absolute
+                opacity: 0
+                margin-bottom: 15px
+                transition:  height 1s ease-out, opacity ease-in-out 0.5s
             .btn-choose
               background: $brandColor
               padding: 20px
               padding-left: 60px
               padding-right: 60px
+              position: relative
+              z-index: 99
+              top: 20px
 
         .b-right
           max-width: 45%
@@ -143,7 +153,6 @@ body
             position: relative
             bottom: -3px
             z-index: 1
-
   .block-second
     position: relative
     z-index: 99
@@ -251,13 +260,16 @@ body
       max-width: 100% !important
   .block-main
     height: unset !important
+
     .block-cap
       height: unset !important
       max-height: 605px
+
       .b-left
         max-width: 100% !important
         text-align: center
         padding-top: 30px !important
+
         .title
           font-size: 2rem
           top: 0
@@ -278,11 +290,13 @@ body
 
           .btn-block
             display: flex
+
             .choose-item
               max-height: unset !important
               border-radius: 15px
               background: #eff1f4 !important
               box-shadow: none !important
+
               &:hover
                 background: white
 
@@ -290,6 +304,7 @@ body
                 font-size: 19px !important
                 align-self: center
                 margin-bottom: 0
+
               span
                 display: none
 
@@ -300,6 +315,7 @@ body
             font-size: 19px !important
             left: 50%
             transform: translateX(-50%)
+
       .b-right
         display: none !important
   #o_nas
@@ -310,10 +326,13 @@ body
 
     .desc-block
       padding: 10px
+
       .desc-f
         font-size: 1.5rem
+
       .desc-b
         font-size: 1.45rem
+
       .desc-fl, .desc-fl a
         font-size: 1.45rem
         margin-bottom: 40px
@@ -322,17 +341,21 @@ body
         display: none
   .block-third
     background: linear-gradient(-10deg, rgba(244, 114, 100, 1) 49.9%, rgba(255, 255, 255, 1) 50%, rgba(44, 192, 167, 1) 50.1%) !important
+
     .b-left
 
       margin-bottom: 50px
   .how-it-work-container
     h3
       font-size: 1.7rem
+
     .journey-timeline
       margin-left: 0
       text-align: center
+
       .journe-block
         max-width: 100% !important
+
         .img-wrap
           img
             max-width: 100% !important
@@ -345,17 +368,22 @@ body
         margin-left: 10px
         position: relative
         bottom: 25px
+
       img
         width: 25px !important
+
     h3
       font-size: 1.7rem
       text-align: left
+
     .mobile-img-wrap
       display: none
+
     .description
       font-family: "Arimo Regular"
       text-align: left
       word-break: break-all
+
     .col-md-5
       img
         margin-top: 50px
@@ -367,8 +395,10 @@ body
         content: '' !important
   .single-btn-container
     text-align: center
+
     h3
       font-size: 2.4rem
+
     button
       margin-bottom: 20px
       width: 70% !important
@@ -379,21 +409,48 @@ body
     .block-cap
       .title
         .rx
-          display: inherit  !important
+          display: inherit !important
+
 @media screen and (min-width: 500px) and (max-width: 768px)
   .block-main
     .block-cap
       .img-man
         img
           margin-top: 35px
+
+      .btn-block
+        justify-content: space-around
+
 @media screen and (min-width: 768px) and (max-width: 1005px)
   .block-main
     .block-cap
       max-height: 727px
+
       .img-man
         img
           width: 450px !important
           margin-top: 30px
+
       .btn-block
         justify-content: space-around
+
+@media screen and (max-width: 390px)
+  .block-main
+    .block-cap
+      max-height: 482px
+
+      .img-man
+        img
+          width: 250px !important
+  .block-second
+    margin-top: 750px !important
+
+    .desc-block
+      .desc-f, .desc-b, .desc-fl
+        font-size: 1.3rem !important
+
+        a
+          font-size: 1.3rem !important
+
+
 

@@ -1,7 +1,5 @@
 let resizetimer = 0;
 
-
-
 const headerFixer = (scrollEvent) => {
     const curScroll = $(document).scrollTop();
     const $topline = $('.topline');
@@ -14,7 +12,7 @@ const headerFixer = (scrollEvent) => {
             $topline.addClass('fixed');
             $header.css('top', $topline.prop('offsetHeight'));
         }
-        return
+        return;
     }
     if (isTopLine) {
         $topline.removeClass('fixed');
@@ -193,6 +191,11 @@ $(document).ready(() => {
     $('.faq-container a').click((e) => {
       e.preventDefault()
     })
+
+    $('.btn-block').hover(() => $('.desc-block-col').css({'height': '70px', opacity: 1}), () => $('.desc-block-col').css({'height':'0px', opacity: 0}))
+    $('.choose-item').hover((e) => showElem(e), (e) => hideElem(e))
+    const showElem =  (e) =>  $($(e.target).data('target')).animate({ opacity: 1}, 50)
+    const  hideElem = (e) => $($(e.target).data('target')).animate({ opacity: 0}, 50)
 
     $(document).on('click', 'a[href^="#"]', function (event) {
         event.preventDefault();
