@@ -54,8 +54,7 @@ const menuHandler = () => {
                 $mobileMenu.css({'opacity': 1, 'height': menu_height});
                 $burger.addClass('open');
             }, 30)
-        }
-        else {
+        } else {
             $mobileMenu.css({'height': 0});
             $burger.removeClass('open');
             setTimeout(() => {
@@ -63,6 +62,14 @@ const menuHandler = () => {
             }, 500)
         }
 
+    })
+
+    $('.mobile-menu li').on('click', () =>  {
+        $mobileMenu.css({'height': 0});
+        $burger.removeClass('open');
+        setTimeout(() => {
+            $mobileMenu.css({'opacity': 0}).removeClass('process');
+        }, 500)
     })
 }
 

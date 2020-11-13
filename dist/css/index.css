@@ -92,15 +92,28 @@ body .block-main {
                     box-shadow: -10px 20px 25px lightgray .3; }
             body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item:hover .triangle-part {
               opacity: 1; }
-      body .block-main .block-cap .container .b-left .choose-block .desc-reception {
-        font-size: 17px;
-        width: 80%;
-        margin-bottom: 40px; }
+      body .block-main .block-cap .container .b-left .choose-block .desc-block-col {
+        height: 0;
+        -webkit-transition: height 0.7s linear;
+        -o-transition: height 0.7s linear;
+        transition: height 0.7s linear; }
+        body .block-main .block-cap .container .b-left .choose-block .desc-block-col .desc-reception {
+          font-size: 17px;
+          width: 80%;
+          position: absolute;
+          opacity: 0;
+          margin-bottom: 15px;
+          -webkit-transition: height 1s ease-out, opacity ease-in-out 0.5s;
+          -o-transition: height 1s ease-out, opacity ease-in-out 0.5s;
+          transition: height 1s ease-out, opacity ease-in-out 0.5s; }
       body .block-main .block-cap .container .b-left .choose-block .btn-choose {
         background: #2cc0a7;
         padding: 20px;
         padding-left: 60px;
-        padding-right: 60px; }
+        padding-right: 60px;
+        position: relative;
+        z-index: 99;
+        top: 20px; }
     body .block-main .block-cap .container .b-right {
       max-width: 45%; }
       body .block-main .block-cap .container .b-right img {
@@ -321,11 +334,15 @@ body footer .big-logo-wrap .logo-brand-text {
 
 @media screen and (max-width: 500px) {
   .block-main .block-cap .title .rx {
-    display: inherit  !important; } }
+    display: inherit !important; } }
 
 @media screen and (min-width: 500px) and (max-width: 768px) {
   .block-main .block-cap .img-man img {
-    margin-top: 35px; } }
+    margin-top: 35px; }
+  .block-main .block-cap .btn-block {
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; } }
 
 @media screen and (min-width: 768px) and (max-width: 1005px) {
   .block-main .block-cap {
@@ -337,3 +354,15 @@ body footer .big-logo-wrap .logo-brand-text {
       -webkit-justify-content: space-around;
           -ms-flex-pack: distribute;
               justify-content: space-around; } }
+
+@media screen and (max-width: 390px) {
+  .block-main .block-cap {
+    max-height: 482px; }
+    .block-main .block-cap .img-man img {
+      width: 250px !important; }
+  .block-second {
+    margin-top: 750px !important; }
+    .block-second .desc-block .desc-f, .block-second .desc-block .desc-b, .block-second .desc-block .desc-fl {
+      font-size: 1.3rem !important; }
+      .block-second .desc-block .desc-f a, .block-second .desc-block .desc-b a, .block-second .desc-block .desc-fl a {
+        font-size: 1.3rem !important; } }
