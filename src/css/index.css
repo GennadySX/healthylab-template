@@ -93,19 +93,16 @@ body .block-main {
             body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item:hover .triangle-part, body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item:focus .triangle-part, body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item:focus .triangle-part {
               opacity: 1; }
       body .block-main .block-cap .container .b-left .choose-block .desc-block-col {
-        height: 0;
         -webkit-transition: height 0.7s linear;
         -o-transition: height 0.7s linear;
         transition: height 0.7s linear; }
         body .block-main .block-cap .container .b-left .choose-block .desc-block-col .desc-reception {
           font-size: 17px;
           width: 80%;
+          height: 0;
           position: absolute;
           opacity: 0;
-          margin-bottom: 15px;
-          -webkit-transition: height 1s ease-out, opacity ease-in-out 0.5s;
-          -o-transition: height 1s ease-out, opacity ease-in-out 0.5s;
-          transition: height 1s ease-out, opacity ease-in-out 0.5s; }
+          margin-bottom: 15px; }
       body .block-main .block-cap .container .b-left .choose-block .btn-choose {
         background: #2cc0a7;
         padding: 20px;

@@ -204,19 +204,23 @@ $(document).ready(() => {
 
     const width = window.innerWidth > 768 ? 70 : 140
     const isMobile = window.innerWidth <= 1005
-    $('.btn-block').hover(() => $('.desc-block-col').css({'height': `${width}px`, opacity: 1}), () =>{
-        $('.choose-block').on('mouseleave', () => {
-            $('.desc-block-col').css({'height':'0px', opacity: 0})
-        })
-        })
-    $('.choose-item').hover((e) =>  showElem(e), (e) => hideElem(e))
-    $('.choose-item').focus((e) =>  isMobile ?? showElemMobile(e)  )
-    const showElem =  (e) =>  $($(e.target).data('target')).animate({ opacity: 1}, 50)
-    const hideElem = (e) => {
-            $($(e.target).data('target')).animate({ opacity: 0}, 0)
-            $('#desc-reception-bx, #desc-reception-a').animate({ opacity: 0});
-            isMobile ? $(".block-second").animate({ "marginTop": 530}, 50) : null
-        }
+    $('.btn-block').hover(() => $('.desc-block-col').css({'height': `${width}px`, opacity: 1}), () =>
+        $('.choose-block').on('mouseleave', () =>  $('.desc-block-col').css({'height':'0px', opacity: 0})))
+    $('.choose-item, .triangle-part').on('mouseover', (e) => byOver(e, 1))
+    $('.choose-item, .triangle-part').on('mouseleave',(e) =>  byOver(e))
+
+    function byOver(e, opacityValue = 0 ) {
+        let elem = $(e.target)
+        if(!elem.attr('data-target')) {
+            elem = elem.parent('.choose-item').data('target')
+        } else elem = elem.data('target')
+        console.log('element is::', elem)
+        $(elem).css({ opacity: 1})
+         if(!opacityValue) $('#desc-reception-bx, #desc-reception-a').css({ opacity: 0});
+    }
+
+
+   // $('.choose-item').focus((e) =>  isMobile ?? showElemMobile(e) )
     const showElemMobile =  (e) => {
         const elem = $(e.target).data('target')
         if (elem.indexOf('bx') >= 0) {
@@ -226,6 +230,8 @@ $(document).ready(() => {
         $(".block-second").animate({ "marginTop": 680}, 50)
     }
 
+
+    
 
     if (window.innerWidth > 578) {
         $( ".faq-container .collapse" ).each(function( index ) {
