@@ -121,6 +121,10 @@ body .block-main {
         position: relative;
         bottom: -3px;
         z-index: 1; }
+        @media screen and (min-width: 1005px) and (max-width: 1200px) {
+          body .block-main .block-cap .container .b-right img {
+            max-width: 470px;
+            height: 745px; } }
 
 body .block-second {
   position: relative;
@@ -140,15 +144,7 @@ body .block-second {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: end;
-    -webkit-align-items: flex-end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-        -ms-flex-pack: end;
-            justify-content: flex-end; }
+    display: flex; }
     body .block-second .container .block-f .b-right img {
       width: 93%; }
 
@@ -352,7 +348,7 @@ body footer .big-logo-wrap .logo-brand-text {
   .block-main .block-cap .title .rx {
     display: inherit !important; } }
 
-@media screen and (min-width: 500px) and (max-width: 768px) {
+@media screen and (min-width: 500px) and (max-width: 767px) {
   .mobile-curve, .step-marker, .journey__track, .track {
     display: none !important; }
   .block-main .block-cap .img-man {

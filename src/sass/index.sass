@@ -154,6 +154,9 @@ body
             position: relative
             bottom: -3px
             z-index: 1
+            @media screen and (min-width: 1005px) and (max-width: 1200px)
+              max-width: 470px
+              height: 745px
 
   .block-second
     position: relative
@@ -180,8 +183,6 @@ body
 
         .b-right
           display: flex
-          align-items: flex-end
-          justify-content: flex-end
 
           img
             width: 93%
@@ -433,7 +434,7 @@ body
 
 
 
-@media screen and (min-width: 500px) and (max-width: 768px)
+@media screen and (min-width: 500px) and (max-width: 767px)
   .mobile-curve, .step-marker, .journey__track, .track
     display: none !important
   .block-main
