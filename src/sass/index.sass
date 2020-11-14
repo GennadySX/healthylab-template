@@ -118,24 +118,25 @@ body
                   opacity: 0
                   transition: opacity 0.5s ease-in-out
 
-                &:hover
-                  box-shadow: -10px 20px 25px lightgray .3
+                &:hover, &:focus, &:focus
+                  box-shadow: -10px 20px 25px lightgray
 
                   & .triangle-part
                     opacity: 1
 
 
-
             .desc-block-col
               height: 0
-              transition:  height 0.7s linear
+              transition: height 0.7s linear
+
               .desc-reception
                 font-size: 17px
                 width: 80%
                 position: absolute
                 opacity: 0
                 margin-bottom: 15px
-                transition:  height 1s ease-out, opacity ease-in-out 0.5s
+                transition: height 1s ease-out, opacity ease-in-out 0.5s
+
             .btn-choose
               background: $brandColor
               padding: 20px
@@ -153,6 +154,7 @@ body
             position: relative
             bottom: -3px
             z-index: 1
+
   .block-second
     position: relative
     z-index: 99
@@ -217,8 +219,10 @@ body
 
       .card-body
         font-family: "Arimo Regular"
+
     .limitly-link-pill
       cursor: pointer
+
   #regModal
     .group
       margin-bottom: 25px
@@ -249,8 +253,7 @@ body
 
 
 @media screen and (max-width: 1005px)
-  .mobile-curve, .step-marker, .journey__track, .track
-    display: none !important
+
   .check-icon
     width: 35px !important
   .m-flexed-block
@@ -293,16 +296,28 @@ body
             display: flex
 
             .choose-item
-              max-height: unset !important
+              max-height: 70px
               border-radius: 15px
+              width: 48%
               background: #eff1f4 !important
               box-shadow: none !important
 
-              &:hover
-                background: white
+              & .triangle-part
+                left: 37%
+
+              &:hover, &:focus, &:active
+                background: white !important
+                box-shadow: 0 10px 25px lightgrey !important
+
+                .triangle-part
+                  display: inherit
+                  height: 10px
+                  width: 20px
+                  top: 5px !important
+                  border-width: 20px 15px 0 15px !important
+
 
               p
-                font-size: 19px !important
                 align-self: center
                 margin-bottom: 0
 
@@ -320,7 +335,8 @@ body
       .b-right
         display: none !important
   #o_nas
-    margin-top: 600px
+    margin-top: 400px
+    transition: margin-top 1s linear
 
     .title-block
       text-align: center
@@ -356,10 +372,12 @@ body
 
       .journe-block
         max-width: 100% !important
+        margin-left: 15px
 
         .img-wrap
           img
-            max-width: 100% !important
+            width: 250px !important
+
   .specialist-container
     .hico-text-wrap
       span
@@ -369,6 +387,7 @@ body
         margin-left: 10px
         position: relative
         bottom: 25px
+        line-height: 1.2
 
       img
         width: 25px !important
@@ -412,15 +431,25 @@ body
         .rx
           display: inherit !important
 
+
+
 @media screen and (min-width: 500px) and (max-width: 768px)
+  .mobile-curve, .step-marker, .journey__track, .track
+    display: none !important
   .block-main
     .block-cap
       .img-man
+        width: 470px !important
+
         img
           margin-top: 35px
 
       .btn-block
         justify-content: space-around
+
+  .single-btn-container
+    button
+      width: 40% !important
 
 @media screen and (min-width: 768px) and (max-width: 1005px)
   .block-main
@@ -434,17 +463,31 @@ body
 
       .btn-block
         justify-content: space-around
-
+  .single-btn-container
+    button
+      width: 40% !important
 @media screen and (max-width: 390px)
   .block-main
     .block-cap
-      max-height: 482px
+      max-height: 580px
 
       .img-man
         img
-          width: 250px !important
+          width: 330px !important
+
+      .choose-block
+        .choose-item
+          padding: 10px
+          max-height: 65px !important
+
+          p
+            font-size: 18px !important
+            line-height: 1.2
+
   .block-second
-    margin-top: 750px !important
+    .block-f
+      padding-top: 40px
+      border-top: 1.5px solid lightgrey
 
     .desc-block
       .desc-f, .desc-b, .desc-fl
@@ -452,6 +495,30 @@ body
 
         a
           font-size: 1.3rem !important
+  .how-it-work-container
+    .img-wrap
+      .img-lg
+        display: none
+  .faq-container
+    //.btn.btn-link[aria-expended="true"]
+      color: $brandColor
+    .card
+      .btn
+        color: gray !important
+        font-size: 15px
+  footer
+    .footer-col
+      margin-top: 0 !important
+      position: relative
 
+      h5
+        display: none
 
+    .first-col
+      top: 20px
 
+    .second-col
+      top: 60px
+
+    .third-col
+      bottom: 92px

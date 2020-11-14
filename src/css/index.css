@@ -87,10 +87,10 @@ body .block-main {
             -webkit-transition: opacity 0.5s ease-in-out;
             -o-transition: opacity 0.5s ease-in-out;
             transition: opacity 0.5s ease-in-out; }
-          body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item:hover {
-            -webkit-box-shadow: -10px 20px 25px lightgray .3;
-                    box-shadow: -10px 20px 25px lightgray .3; }
-            body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item:hover .triangle-part {
+          body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item:hover, body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item:focus, body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item:focus {
+            -webkit-box-shadow: -10px 20px 25px lightgray;
+                    box-shadow: -10px 20px 25px lightgray; }
+            body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item:hover .triangle-part, body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item:focus .triangle-part, body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item:focus .triangle-part {
               opacity: 1; }
       body .block-main .block-cap .container .b-left .choose-block .desc-block-col {
         height: 0;
@@ -206,8 +206,6 @@ body footer .big-logo-wrap .logo-brand-text {
   top: 5px; }
 
 @media screen and (max-width: 1005px) {
-  .mobile-curve, .step-marker, .journey__track, .track {
-    display: none !important; }
   .check-icon {
     width: 35px !important; }
   .m-flexed-block {
@@ -247,15 +245,25 @@ body footer .big-logo-wrap .logo-brand-text {
             display: -ms-flexbox;
             display: flex; }
             .block-main .block-cap .b-left .choose-block .btn-block .choose-item {
-              max-height: unset !important;
+              max-height: 70px;
               border-radius: 15px;
+              width: 48%;
               background: #eff1f4 !important;
               -webkit-box-shadow: none !important;
                       box-shadow: none !important; }
-              .block-main .block-cap .b-left .choose-block .btn-block .choose-item:hover {
-                background: white; }
+              .block-main .block-cap .b-left .choose-block .btn-block .choose-item .triangle-part {
+                left: 37%; }
+              .block-main .block-cap .b-left .choose-block .btn-block .choose-item:hover, .block-main .block-cap .b-left .choose-block .btn-block .choose-item:focus, .block-main .block-cap .b-left .choose-block .btn-block .choose-item:active {
+                background: white !important;
+                -webkit-box-shadow: 0 10px 25px lightgrey !important;
+                        box-shadow: 0 10px 25px lightgrey !important; }
+                .block-main .block-cap .b-left .choose-block .btn-block .choose-item:hover .triangle-part, .block-main .block-cap .b-left .choose-block .btn-block .choose-item:focus .triangle-part, .block-main .block-cap .b-left .choose-block .btn-block .choose-item:active .triangle-part {
+                  display: inherit;
+                  height: 10px;
+                  width: 20px;
+                  top: 5px !important;
+                  border-width: 20px 15px 0 15px !important; }
               .block-main .block-cap .b-left .choose-block .btn-block .choose-item p {
-                font-size: 19px !important;
                 -webkit-align-self: center;
                     -ms-flex-item-align: center;
                         align-self: center;
@@ -274,7 +282,10 @@ body footer .big-logo-wrap .logo-brand-text {
       .block-main .block-cap .b-right {
         display: none !important; }
   #o_nas {
-    margin-top: 600px; }
+    margin-top: 400px;
+    -webkit-transition: margin-top 1s linear;
+    -o-transition: margin-top 1s linear;
+    transition: margin-top 1s linear; }
     #o_nas .title-block {
       text-align: center; }
     #o_nas .desc-block {
@@ -299,16 +310,18 @@ body footer .big-logo-wrap .logo-brand-text {
     margin-left: 0;
     text-align: center; }
     .how-it-work-container .journey-timeline .journe-block {
-      max-width: 100% !important; }
+      max-width: 100% !important;
+      margin-left: 15px; }
       .how-it-work-container .journey-timeline .journe-block .img-wrap img {
-        max-width: 100% !important; }
+        width: 250px !important; }
   .specialist-container .hico-text-wrap span {
     font-size: 1.2rem;
     width: 80%;
     text-align: left;
     margin-left: 10px;
     position: relative;
-    bottom: 25px; }
+    bottom: 25px;
+    line-height: 1.2; }
   .specialist-container .hico-text-wrap img {
     width: 25px !important; }
   .specialist-container h3 {
@@ -340,12 +353,18 @@ body footer .big-logo-wrap .logo-brand-text {
     display: inherit !important; } }
 
 @media screen and (min-width: 500px) and (max-width: 768px) {
-  .block-main .block-cap .img-man img {
-    margin-top: 35px; }
+  .mobile-curve, .step-marker, .journey__track, .track {
+    display: none !important; }
+  .block-main .block-cap .img-man {
+    width: 470px !important; }
+    .block-main .block-cap .img-man img {
+      margin-top: 35px; }
   .block-main .block-cap .btn-block {
     -webkit-justify-content: space-around;
         -ms-flex-pack: distribute;
-            justify-content: space-around; } }
+            justify-content: space-around; }
+  .single-btn-container button {
+    width: 40% !important; } }
 
 @media screen and (min-width: 768px) and (max-width: 1005px) {
   .block-main .block-cap {
@@ -356,16 +375,41 @@ body footer .big-logo-wrap .logo-brand-text {
     .block-main .block-cap .btn-block {
       -webkit-justify-content: space-around;
           -ms-flex-pack: distribute;
-              justify-content: space-around; } }
+              justify-content: space-around; }
+  .single-btn-container button {
+    width: 40% !important; } }
 
 @media screen and (max-width: 390px) {
   .block-main .block-cap {
-    max-height: 482px; }
+    max-height: 580px; }
     .block-main .block-cap .img-man img {
-      width: 250px !important; }
-  .block-second {
-    margin-top: 750px !important; }
-    .block-second .desc-block .desc-f, .block-second .desc-block .desc-b, .block-second .desc-block .desc-fl {
+      width: 330px !important; }
+    .block-main .block-cap .choose-block .choose-item {
+      padding: 10px;
+      max-height: 65px !important; }
+      .block-main .block-cap .choose-block .choose-item p {
+        font-size: 18px !important;
+        line-height: 1.2; }
+  .block-second .block-f {
+    padding-top: 40px;
+    border-top: 1.5px solid lightgrey; }
+  .block-second .desc-block .desc-f, .block-second .desc-block .desc-b, .block-second .desc-block .desc-fl {
+    font-size: 1.3rem !important; }
+    .block-second .desc-block .desc-f a, .block-second .desc-block .desc-b a, .block-second .desc-block .desc-fl a {
       font-size: 1.3rem !important; }
-      .block-second .desc-block .desc-f a, .block-second .desc-block .desc-b a, .block-second .desc-block .desc-fl a {
-        font-size: 1.3rem !important; } }
+  .how-it-work-container .img-wrap .img-lg {
+    display: none; }
+  .faq-container .card .btn {
+    color: gray !important;
+    font-size: 15px; }
+  footer .footer-col {
+    margin-top: 0 !important;
+    position: relative; }
+    footer .footer-col h5 {
+      display: none; }
+  footer .first-col {
+    top: 20px; }
+  footer .second-col {
+    top: 60px; }
+  footer .third-col {
+    bottom: 92px; } }

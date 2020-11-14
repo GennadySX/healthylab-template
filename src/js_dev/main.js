@@ -64,13 +64,16 @@ const menuHandler = () => {
 
     })
 
-    $('.mobile-menu li').on('click', () =>  {
+    $('.mobile-menu li, section').on('touchend', () =>  {
         $mobileMenu.css({'height': 0});
         $burger.removeClass('open');
         setTimeout(() => {
             $mobileMenu.css({'opacity': 0}).removeClass('process');
         }, 500)
     })
+
+
+
 }
 
 
@@ -199,16 +202,41 @@ $(document).ready(() => {
       e.preventDefault()
     })
 
-    $('.btn-block').hover(() => $('.desc-block-col').css({'height': '70px', opacity: 1}), () => $('.desc-block-col').css({'height':'0px', opacity: 0}))
-    $('.choose-item').hover((e) => showElem(e), (e) => hideElem(e))
+    const width = window.innerWidth > 768 ? 70 : 140
+    const isMobile = window.innerWidth <= 1005
+    $('.btn-block').hover(() => $('.desc-block-col').css({'height': `${width}px`, opacity: 1}), () =>{
+        $('.choose-block').on('mouseleave', () => {
+            $('.desc-block-col').css({'height':'0px', opacity: 0})
+        })
+        })
+    $('.choose-item').hover((e) =>  showElem(e), (e) => hideElem(e))
+    $('.choose-item').focus((e) =>  isMobile ?? showElemMobile(e)  )
     const showElem =  (e) =>  $($(e.target).data('target')).animate({ opacity: 1}, 50)
-    const  hideElem = (e) => $($(e.target).data('target')).animate({ opacity: 0}, 50)
+    const hideElem = (e) => {
+            $($(e.target).data('target')).animate({ opacity: 0}, 0)
+            $('#desc-reception-bx, #desc-reception-a').animate({ opacity: 0});
+            isMobile ? $(".block-second").animate({ "marginTop": 530}, 50) : null
+        }
+    const showElemMobile =  (e) => {
+        const elem = $(e.target).data('target')
+        if (elem.indexOf('bx') >= 0) {
+            $('#desc-reception-a').animate({ opacity: 0}, 0)
+        } else  $('#desc-reception-bx').animate({ opacity: 0}, 0)
+        $(elem).animate({ opacity: 1}, 250)
+        $(".block-second").animate({ "marginTop": 680}, 50)
+    }
 
+
+    if (window.innerWidth > 578) {
+        $( ".faq-container .collapse" ).each(function( index ) {
+            $(this).addClass('show')
+        });
+    }
     $(document).on('click', 'a[href^="#"]', function (event) {
         event.preventDefault();
 
         $('html, body').animate({
-            scrollTop: $($.attr(this, 'href')).offset().top
+            scrollTop: $($.attr(this, 'href')).offset().top-70
         }, 500);
     });
 

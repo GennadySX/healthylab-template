@@ -426,7 +426,7 @@ h6 {
     text-decoration: none
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 450px) and (max-width: 767px) {
     #accordion .card .card-header, #accordion .card .card-header .btn {
         font-size: 18px;
         color: #2cc0a7 !important;
@@ -3212,9 +3212,6 @@ footer .footer .footer-col.third-col .line {
 }
 
 @media only screen and (max-width: 1005px) {
-    footer .footer .big-logo-wrap {
-        display: none
-    }
 
     footer .footer .footer-col {
         margin-top: 30px;
@@ -3228,6 +3225,7 @@ footer .footer .footer-col.third-col .line {
         align-items: center;
         text-align: center
     }
+
 
     footer .footer .footer-col .line {
         display: -webkit-inline-box;

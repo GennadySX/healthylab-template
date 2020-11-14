@@ -22,15 +22,16 @@
 <div class="header-hero-wrap">
     <header class="white-text fixed mb-0" style="top: 0px;">
         <div class="container h-100 header-container">
-            <div class="big-logo-wrap">
+            <a href="#block-main" class="big-logo-wrap">
                 <div class="logo-icon">
                     <img src="./img/icons/logo.png" style="max-width: 45px" alt=""></div>
                 <div class="logo-text">
                     <small class="mb-0 logo-brand-text text-dark" style="position: relative; top: 8px">Digital
                         Health</small>
                     <p class="position-relative logo-desc color-brand">for business
-                    <p/></div>
-            </div>
+                    <p/>
+                </div>
+            </a>
             <div class="right-block">
                 <nav class="navbar navbar-expand-lg d-none d-lg-block  navbar-light">
                     <div class="collapse navbar-collapse">
@@ -91,13 +92,16 @@
         </div>
     </header>
 </div>
-<section class="block block-main">
+<section id="block-main" class="block block-main" >
     <div class="block-cap">
         <div class="container d-flex justify-content-between flex-sm-wrap flex-md-nowrap">
             <div class="b-left">
                 <h1 class="title font-regular">Сервис Digital Health решает все <br class="rx"> проблемы</h1>
                 <div class="img-man mobile d-lg-none d-md-block d-sm-block">
                     <img src="./img/bg-transparent.png" alt="">
+                    <button class="btn btn-choose text-light btn-healthy" data-toggle="modal"
+                            data-target="#regModal" id="start_top_button ">НАЧАТЬ
+                    </button>
                 </div>
                 <div class="desc-b-left-content">
                     <p class="desc font-regular">С нашей помощью Вы сможете повысить продуктивность работы своих коллег
@@ -105,15 +109,14 @@
                         позаботиться об их психическом здоровье. </p>
                     <p class="choose-desc brand-color color-brand">В изменившемся мире каждому нужна поддержка. <br>
                         Оставайтесь продуктивным.</p>
-                    <div class="choose-block">
+                    <div class="choose-block" >
                         <div class="btn-block">
                             <a href="javascript:void(0);" class="choose-item btn btn-healthy a"
                                data-target="#desc-reception-a"><p>Личная польза</p> <span class="triangle-part"></span></a>
                             <a href="javascript:void(0);" class="choose-item btn btn-healthy b"
-                               data-target="#desc-reception-bx"><p>Польза для бизнеса </p><span
-                                    class="triangle-part"></span></a>
+                               data-target="#desc-reception-bx"><p>Польза для бизнеса </p><span class="triangle-part"></span></a>
                         </div>
-                        <div class="desc-block-col col-12">
+                        <div class="desc-block-col col-12" >
                             <p class="desc-reception font-regular" id="desc-reception-a">Cпокойствие, продуктивность,
                                 концентрация внимания, эффективность в решении задач.</p>
                             <p class="desc-reception font-regular" id="desc-reception-bx">Снижение текучести кадров,
@@ -185,7 +188,7 @@
         </div>
     </div>
 </section>
-<div class="how-it-work-container" id="how-it-work-container">
+<section class="how-it-work-container" id="how-it-work-container">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -205,7 +208,9 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="journe-block">
                         <div class="img-wrap ">
-                            <img src="./img/icons/001.svg" style="position: relative; width: 250px; height: 250px"
+                            <img src="./img/icons/001.svg"  class="d-lg-block d-mg-block d-sm-none img-lg"  style="position: relative; width: 250px; height: 250px"
+                                 alt="">
+                            <img src="./img/icons/1.png" class="d-lg-none d-mg-none d-sm-block mb-3"
                                  alt="">
                         </div>
                         <div class="title mb-2 mt-0">Подбор специалиста</div>
@@ -225,7 +230,9 @@
                 <div class="col-lg-4 col-md-5">
                     <div class="journe-block">
                         <div class="img-wrap">
-                            <img src="./img/icons/002.svg" style="position: relative; width: 250px; height: 250px"
+                            <img src="./img/icons/002.svg" class="d-lg-block d-mg-block d-sm-none img-lg"  style="position: relative; width: 250px; height: 250px"
+                                 alt="">
+                            <img src="./img/icons/2.png" class="d-lg-none d-mg-none d-sm-block mb-3"
                                  alt="">
                         </div>
                         <div class="title mb-2 mt-0">Общение в чате</div>
@@ -244,7 +251,9 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="journe-block">
                         <div class="img-wrap">
-                            <img src="./img/icons/003.svg" style="position: relative; width: 250px; height: 250px"
+                            <img src="./img/icons/003.svg" class="d-lg-block d-mg-block d-sm-none img-lg" style="position: relative; width: 250px; height: 250px"
+                                 alt="">
+                            <img src="./img/icons/3.png" class="d-lg-none d-mg-none d-sm-block mb-3"
                                  alt="">
                         </div>
                         <div class="title mb-2 mt-0">Результаты</div>
@@ -259,8 +268,8 @@
             </div>
         </div>
     </div>
-</div>
-<div class="specialist-container" id="specialist-container">
+</section>
+<section class="specialist-container" id="specialist-container">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-7">
@@ -288,8 +297,8 @@
         </div>
 
     </div>
-</div>
-<div class="faq-container" id="faq-comments">
+</section>
+<section class="faq-container" id="faq-comments">
     <div class="container">
         <div class="text-center">
             <h3>Часто задаваемые вопросы <br>
@@ -305,15 +314,20 @@
                          role="button" aria-controls="v-pills-async" aria-selected="false">Как работает асинхронное
                         общение
                     </div>
-                    <div class="nav-link" id="v-pills-online-consultation-tab" data-toggle="pill" href="#v-pills-online-consultation"
+                    <div class="nav-link" id="v-pills-online-consultation-tab" data-toggle="pill"
+                         href="#v-pills-online-consultation"
                          role="button" aria-controls="v-pills-online-consultation" aria-selected="false">Почему онлайн
                         консултирование лучше
                     </div>
-                    <div class="nav-link" id="v-pills-about-discussion-tab" data-toggle="pill" href="#v-pills-about-discussion"
-                         role="button" aria-controls="v-pills-about-discussion" aria-selected="false">Какие темы мы обсуждаем
+                    <div class="nav-link" id="v-pills-about-discussion-tab" data-toggle="pill"
+                         href="#v-pills-about-discussion"
+                         role="button" aria-controls="v-pills-about-discussion" aria-selected="false">Какие темы мы
+                        обсуждаем
                     </div>
-                    <div class="nav-link" id="v-pills-not-discussion-tab" data-toggle="pill" href="#v-pills-not-discussion"
-                         role="button" aria-controls="v-pills-not-discussion" aria-selected="false">Какие темы мы не обсуждаем
+                    <div class="nav-link" id="v-pills-not-discussion-tab" data-toggle="pill"
+                         href="#v-pills-not-discussion"
+                         role="button" aria-controls="v-pills-not-discussion" aria-selected="false">Какие темы мы не
+                        обсуждаем
                     </div>
                     <div class="nav-link" id="v-pills-process-tab" data-toggle="pill" href="#v-pills-process"
                          role="button" aria-controls="v-pills-process" aria-selected="false">Как понять, что это
@@ -336,7 +350,7 @@
                                         </button>
                                     </div>
 
-                                    <div id="collapse-0" class="collapse show" aria-labelledby="heading-0"
+                                    <div id="collapse-0" class="collapse " aria-labelledby="heading-0"
                                          data-parent="#accordion">
                                         <div class="card-body">
                                             Мир радикально изменился с появлением формата удаленной работы. Людям сложно
@@ -365,21 +379,28 @@
                         <div class="tab-body">
                             <div id="accordion">
                                 <div class="card">
-                                    <div class="card-header" id="heading-0">
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-0"
-                                                aria-expanded="true" aria-controls="collapse-0">Как работает асинхронное общение:
+                                    <div class="card-header" id="heading-2">
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-2"
+                                                aria-expanded="false" aria-controls="collapse-2">Как работает асинхронное
+                                            общение:
                                         </button>
                                     </div>
 
-                                    <div id="collapse-0" class="collapse show" aria-labelledby="heading-0"
+                                    <div id="collapse-2" class="collapse " aria-labelledby="heading-2"
                                          data-parent="#accordion">
                                         <div class="card-body">
-                                            Онлайн общение с психологом – это профессиональное консультирование по психологическим вопросам через Интернет с помощью
-                                            чата. Эффективность и удобство онлайн-консультирования в мире быстрых сообщений становится отличной альтернативой
-                                            традиционным “face-to-face” сеансам или необходимым дополнением к сеансам классической терапии. Что такое общение с
-                                            психологом в чате? Клиент и психолог могут обмениваться неограниченным количеством текстовых сообщений через телефон, онлайн-
-                                            платформу или мобильное приложение. Здесь нет чётко запланированных сессий, поэтому сотрудник может написать в чат в удобное
-                                            время, может дополнить или уточнить запрос позже. Практика написания запроса уже сама по себе является частью терапии.
+                                            Онлайн общение с психологом – это профессиональное консультирование по
+                                            психологическим вопросам через Интернет с помощью
+                                            чата. Эффективность и удобство онлайн-консультирования в мире быстрых
+                                            сообщений становится отличной альтернативой
+                                            традиционным “face-to-face” сеансам или необходимым дополнением к сеансам
+                                            классической терапии. Что такое общение с
+                                            психологом в чате? Клиент и психолог могут обмениваться неограниченным
+                                            количеством текстовых сообщений через телефон, онлайн-
+                                            платформу или мобильное приложение. Здесь нет чётко запланированных сессий,
+                                            поэтому сотрудник может написать в чат в удобное
+                                            время, может дополнить или уточнить запрос позже. Практика написания запроса
+                                            уже сама по себе является частью терапии.
                                         </div>
                                     </div>
                                 </div>
@@ -391,23 +412,32 @@
                         <div class="tab-body">
                             <div id="accordion">
                                 <div class="card">
-                                    <div class="card-header" id="heading-0">
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-0"
-                                                aria-expanded="true" aria-controls="collapse-0">Почему онлайн консультирование лучше:
+                                    <div class="card-header" id="heading-3">
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-3"
+                                                aria-expanded="false" aria-controls="collapse-3">Почему онлайн
+                                            консультирование лучше:
                                         </button>
                                     </div>
 
-                                    <div id="collapse-0" class="collapse show" aria-labelledby="heading-0"
+                                    <div id="collapse-3" class="collapse " aria-labelledby="heading-3"
                                          data-parent="#accordion">
                                         <div class="card-body">
-                                            При сравнении с практикой найма штатного психолога, онлайн сервис имеет несколько преимуществ : 1. экономия на трудоустройстве и
-                                            социальных выплатах штатному сотруднику; 2. Психолог HealthyLab не является сотрудником компании, сохраняя невовлеченность в
-                                            процессы компании: его уровень объективности значительно выше; 3. Штатные психологи, как и прочие сотрудники, сами оказались не
-                                            готовы к формату удаленной работы. Наши специалисты изначально подготовлены к данному формату; 4. Не каждому человеку
-                                            комфортно идти на сессию к психотерапевту лично. К штатному психологу сотрудники стесняются обращаться в силу публичности этих
-                                            визитов. О том, что сотрудник использует онлайн-платформу для общения с психологом, без собственного желания пациента не узнают
-                                            его коллеги: мы сохраняем конфиденциальность. 5. ресурс штатного психолога ограничен временем приёма и рабочим расписанием.
-                                            Работа онлайн-платформы через асинхронное общение позволяет большему количеству сотрудников получать необходимую помощь в
+                                            При сравнении с практикой найма штатного психолога, онлайн сервис имеет
+                                            несколько преимуществ : 1. экономия на трудоустройстве и
+                                            социальных выплатах штатному сотруднику; 2. Психолог HealthyLab не является
+                                            сотрудником компании, сохраняя невовлеченность в
+                                            процессы компании: его уровень объективности значительно выше; 3. Штатные
+                                            психологи, как и прочие сотрудники, сами оказались не
+                                            готовы к формату удаленной работы. Наши специалисты изначально подготовлены
+                                            к данному формату; 4. Не каждому человеку
+                                            комфортно идти на сессию к психотерапевту лично. К штатному психологу
+                                            сотрудники стесняются обращаться в силу публичности этих
+                                            визитов. О том, что сотрудник использует онлайн-платформу для общения с
+                                            психологом, без собственного желания пациента не узнают
+                                            его коллеги: мы сохраняем конфиденциальность. 5. ресурс штатного психолога
+                                            ограничен временем приёма и рабочим расписанием.
+                                            Работа онлайн-платформы через асинхронное общение позволяет большему
+                                            количеству сотрудников получать необходимую помощь в
                                             течение дня.
                                         </div>
                                     </div>
@@ -420,19 +450,20 @@
                         <div class="tab-body">
                             <div id="accordion">
                                 <div class="card">
-                                    <div class="card-header" id="heading-0">
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-0"
-                                                aria-expanded="true" aria-controls="collapse-0">Какие темы мы обсуждаем:
+                                    <div class="card-header" id="heading-4">
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-4"
+                                                aria-expanded="true" aria-controls="collapse-4">Какие темы мы обсуждаем:
                                         </button>
                                     </div>
 
-                                    <div id="collapse-0" class="collapse show" aria-labelledby="heading-0"
+                                    <div id="collapse-4" class="collapse " aria-labelledby="heading-4"
                                          data-parent="#accordion">
-                                        <div class="card-body">
-                                            Тревожность, стресс, потеря мотивации, подавленная агрессия, апатия, сложности с
-                                            концентрацией внимания, конфликтные ситуации с коллегами. Мы работаем с множеством
-                                            тем, которые приводят к указанным выше симптомам. Но есть и ограничения. (слово
-                                            «ограничения» сделать ссылкой на следующий раздел)
+                                        <div class="card-body ">
+                                            Тревожность, стресс, потеря мотивации, подавленная агрессия, апатия,
+                                            сложности с
+                                            концентрацией внимания, конфликтные ситуации с коллегами. Мы работаем с
+                                            множеством
+                                            тем, которые приводят к указанным выше симптомам. Но есть и <span  class="limitly-link-pill color-brand text-underline">ограничения</span>.
                                         </div>
                                     </div>
                                 </div>
@@ -445,22 +476,28 @@
                         <div class="tab-body">
                             <div id="accordion">
                                 <div class="card">
-                                    <div class="card-header" id="heading-0">
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-0"
-                                                aria-expanded="true" aria-controls="collapse-0">Какие темы мы не обсуждаем:
+                                    <div class="card-header" id="heading-5">
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-5"
+                                                aria-expanded="true" aria-controls="collapse-0">Какие темы мы не
+                                            обсуждаем:
                                         </button>
                                     </div>
 
-                                    <div id="collapse-0" class="collapse show" aria-labelledby="heading-0"
+                                    <div id="collapse-5" class="collapse " aria-labelledby="heading-5"
                                          data-parent="#accordion">
                                         <div class="card-body">
-                                            Серьезные нарушения психологического здоровья, требующие медикаментозного или
-                                            стационарного лечения. Патологии, вызывающие асоциальное поведение. Зависимости и
+                                            Серьезные нарушения психологического здоровья, требующие медикаментозного
+                                            или
+                                            стационарного лечения. Патологии, вызывающие асоциальное поведение.
+                                            Зависимости и
                                             фобии, вызывающие асоциальное поведение. Ситуации, которые угрожают Вашему
-                                            физическому или психическому здоровью, а также здоровью и состоянию окружающих Вас
-                                            людей. Наш сервис не является медицинским учреждением. Если Вам нужна срочная
-                                            медицинская помощь или помощь в кризисной ситуации, где есть угроза для Вашей или чужой
-                                            жизни, обратитесь в экстренные службы. (привести телефоны экстренных служб)
+                                            физическому или психическому здоровью, а также здоровью и состоянию
+                                            окружающих Вас
+                                            людей. Наш сервис не является медицинским учреждением. Если Вам нужна
+                                            срочная
+                                            медицинская помощь или помощь в кризисной ситуации, где есть угроза для
+                                            Вашей или чужой
+                                            жизни, обратитесь в <a href="#" class="text-underline color-brand">экстренные службы</a>.
                                         </div>
                                     </div>
                                 </div>
@@ -473,21 +510,28 @@
                         <div class="tab-body">
                             <div id="accordion">
                                 <div class="card">
-                                    <div class="card-header" id="heading-0">
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-0"
-                                                aria-expanded="true" aria-controls="collapse-0">Как понять, что это работает:
+                                    <div class="card-header" id="heading-6">
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-6"
+                                                aria-expanded="true" aria-controls="collapse-0">Как понять, что это
+                                            работает:
                                         </button>
                                     </div>
 
-                                    <div id="collapse-0" class="collapse show" aria-labelledby="heading-0"
+                                    <div id="collapse-6" class="collapse " aria-labelledby="heading-6"
                                          data-parent="#accordion">
                                         <div class="card-body">
-                                            Совместно с психологами мы разрабатываем систему оценки успешности проводимых
-                                            консультаций. Разные формы обратной связи: анкеты, опросы, тесты, - позволят нам наглядно
-                                            продемонстрировать пользу от нашего сотрудничества. Мы постоянно совершенствуем
-                                            методологию проведения онлайн-консультаций. Находим новые направления, психологов
-                                            высокой квалификации для разных запросов и тем. Мы совершенствуем свою работу на
-                                            основании обратной связи от клиентов, психологов и наших партнёров: улучшаем сервис,
+                                            Совместно с психологами мы разрабатываем систему оценки успешности
+                                            проводимых
+                                            консультаций. Разные формы обратной связи: анкеты, опросы, тесты, - позволят
+                                            нам наглядно
+                                            продемонстрировать пользу от нашего сотрудничества. Мы постоянно
+                                            совершенствуем
+                                            методологию проведения онлайн-консультаций. Находим новые направления,
+                                            психологов
+                                            высокой квалификации для разных запросов и тем. Мы совершенствуем свою
+                                            работу на
+                                            основании обратной связи от клиентов, психологов и наших партнёров: улучшаем
+                                            сервис,
                                             открыты к общению и кастомизации предложений.
                                         </div>
                                     </div>
@@ -500,16 +544,16 @@
             </div>
         </div>
     </div>
-</div>
-<div class="single-btn-container d-block d-md-flex bg-brand flex-md-wrap">
+</section>
+<section class="single-btn-container d-block d-md-flex bg-brand flex-md-wrap">
     <h3 class="w-100 text-center mb-4 text-light">Связаться с нами</h3>
-    <button class="btn color-brand bg-white reg-btn mr-3 p-3 pl-5 pr-5" data-toggle="modal" data-target="#regModal"
+    <button class="btn color-brand bg-white reg-btn mr-lg-3 mr-md-3 mr-sm-0 p-3 pl-5 pr-5" data-toggle="modal" data-target="#regModal"
             id="start_bottom_button">Заполнить форму
     </button>
     <button class="btn color-brand bg-white reg-btn p-3 pl-5 pr-5" data-toggle="modal" data-target="#regModal"
             id="start_bottom_button">обратный звонок
     </button>
-</div>
+</section>
 <footer id="contacts">
     <div class="container footer">
         <div class="footer-col first-col">
@@ -547,7 +591,6 @@
             <div class="line">
             </div>
         </div>
-
 
         <div class="footer-col second-col">
             <div class="line">

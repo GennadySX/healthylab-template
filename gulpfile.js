@@ -46,7 +46,7 @@ gulp.task('scripts', () => gulp.src('src/js_dev/**/*.js')
 
 /***CSS_LIBS***/
 gulp.task('css', () => gulp.src('src/mode/*.css')
-    .pipe(cssnano())
+    //.pipe(cssnano())
     .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7']), {cascade: true})
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('src/css'))
