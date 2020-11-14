@@ -82,7 +82,7 @@ gulp.task('watch', () => {
 
 gulp.task('clean', async () => del.sync('dist'));
 
-gulp.task('bcss', () => gulp.src(['src/mode/*.css', 'src/css/*.css', 'src/css/*.min.css'])
+gulp.task('bcss', () => gulp.src(['src/mode/*.min.css', 'src/css/*.css', 'src/css/*.min.css'])
     .pipe(gulp.dest('dist/css')));
 
 gulp.task('bfonts', () => gulp.src('src/fonts/**/*')
