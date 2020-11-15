@@ -414,7 +414,7 @@ h6 {
 }
 
 #accordion .card .card-header, #accordion .card .card-header .btn {
-    font-size: 22px;
+    font-size: 21px;
     padding: 0 20px 0 0;
     font-weight: 700;
     color: #20242c;
@@ -429,7 +429,7 @@ h6 {
 @media only screen and (min-width: 450px) and (max-width: 767px) {
     #accordion .card .card-header, #accordion .card .card-header .btn {
         font-size: 18px;
-        color: #2cc0a7 !important;
+        color: #2cc0a7 ;
         margin-bottom: 10px
     }
 }
@@ -2213,6 +2213,27 @@ header.fixed .toggler-ico span {
     width: 100%
 }
 
+
+
+@media only screen  and (min-width: 768px)  and (max-width: 990px) {
+    .specialist-container .hico-text-wrap {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+
+    }
+    .specialist-container .hico-text-wrap span {
+        margin-left: 25px !important;
+    }
+    .specialist-container .hico-text-wrap img {
+        position: relative;
+        top: 10px;
+    }
+
+
+}
 @media only screen and (max-width: 767px) {
     .specialist-container {
         padding: 30px 0 50px;
@@ -3204,6 +3225,26 @@ footer .footer .footer-col.third-col .line {
         max-width: 100%
     }
 }
+@media only screen and (min-width: 1005px) and (max-width: 1199px) {
+    footer .footer {
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start
+    }
+
+    footer .footer .footer-col {
+        width: unset !important
+    }
+
+    footer .footer .footer-col {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1 0 100%;
+        -ms-flex: 1 0 100%;
+        flex: 1 0 33%;
+        max-width: 100%
+    }
+}
 
 @media only screen and (max-width: 1005px) {
 
@@ -3418,6 +3459,7 @@ footer .footer .footer-col.third-col .line {
 
 @media only screen and (max-width: 767px) {
     .journey-timeline .journey__track {
+        display: none !important;
         top: 0;
         width: 4px;
         left: 3px;
@@ -3512,7 +3554,7 @@ footer .footer .footer-col.third-col .line {
 
 @media only screen and (max-width: 767px) {
     .journey-timeline .step-marker--mobile {
-        display: block;
+        display: none;
         margin-left: 0;
         position: absolute;
         left: 10px;
