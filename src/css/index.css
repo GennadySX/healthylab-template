@@ -103,7 +103,7 @@ body .block-main {
           position: absolute;
           opacity: 0;
           margin-bottom: 15px; }
-      body .block-main .block-cap .container .b-left .choose-block .btn-choose {
+      body .block-main .block-cap .container .b-left .btn-choose, body .block-main .block-cap .container .b-left .btn-choose-dub {
         background: #2cc0a7;
         padding: 20px;
         padding-left: 60px;
@@ -111,17 +111,43 @@ body .block-main {
         position: relative;
         z-index: 99;
         top: 20px; }
+    body .block-main .block-cap .container .btn-choose-dub {
+      position: absolute; }
+      @media screen and (min-width: 300px) and (max-width: 425px) {
+        body .block-main .block-cap .container .btn-choose-dub {
+          margin-top: -220px;
+          margin-right: 20px; } }
+      @media screen and (min-width: 426px) and (max-width: 578px) {
+        body .block-main .block-cap .container .btn-choose-dub {
+          margin-right: 10%;
+          margin-top: -250px; } }
+      @media screen and (min-width: 540px) and (max-width: 578px) {
+        body .block-main .block-cap .container .btn-choose-dub {
+          margin-right: 15%; } }
+      @media screen and (min-width: 578px) and (max-width: 1005px) {
+        body .block-main .block-cap .container .btn-choose-dub {
+          margin-top: -270px;
+          margin-right: 70px; } }
+      @media screen and (min-width: 768px) and (max-width: 1005px) {
+        body .block-main .block-cap .container .btn-choose-dub {
+          margin-right: 20px; } }
     body .block-main .block-cap .container .b-right {
       max-width: 45%; }
       body .block-main .block-cap .container .b-right img {
         width: 605px;
         position: relative;
-        bottom: -3px;
+        bottom: 14px;
         z-index: 1; }
-        @media screen and (min-width: 1005px) and (max-width: 1200px) {
+        @media screen and (min-width: 990px) and (max-width: 1200px) {
           body .block-main .block-cap .container .b-right img {
-            max-width: 470px;
-            height: 745px; } }
+            max-width: 460px;
+            height: 675px;
+            top: 75px; } }
+        @media screen and (min-width: 1200px) and (max-width: 1320px) {
+          body .block-main .block-cap .container .b-right img {
+            max-width: 480px;
+            height: 675px;
+            top: 75px; } }
 
 body .block-second {
   position: relative;
@@ -198,7 +224,7 @@ body footer .big-logo-wrap .logo-brand-text {
   position: relative;
   top: 5px; }
 
-@media screen and (max-width: 1005px) {
+@media screen and (max-width: 990px) {
   .check-icon {
     width: 35px !important; }
   .m-flexed-block {
@@ -316,7 +342,10 @@ body footer .big-logo-wrap .logo-brand-text {
     bottom: 25px;
     line-height: 1.2; }
   .specialist-container .hico-text-wrap img {
-    width: 25px !important; }
+    width: 35px;
+    height: 35px;
+    -o-object-fit: contain;
+       object-fit: contain; }
   .specialist-container h3 {
     font-size: 1.7rem;
     text-align: left; }
@@ -341,9 +370,41 @@ body footer .big-logo-wrap .logo-brand-text {
       width: 70% !important;
       padding: 20px !important; } }
 
-@media screen and (max-width: 500px) {
-  .block-main .block-cap .title .rx {
-    display: inherit !important; } }
+@media screen and (min-width: 768px) and (max-width: 990px) {
+  .block-main .block-cap {
+    max-height: 727px; }
+    .block-main .block-cap .img-man img {
+      width: 450px !important;
+      margin-top: 18px; }
+    .block-main .block-cap .btn-block {
+      -webkit-justify-content: space-around;
+          -ms-flex-pack: distribute;
+              justify-content: space-around; }
+  .single-btn-container button {
+    width: 40% !important; } }
+
+@media screen and (max-width: 768px) {
+  .how-it-work-container .journey-timeline {
+    text-align: left; }
+  .how-it-work-container .journeyTrack {
+    display: none; }
+  .how-it-work-container .journe-block .title, .how-it-work-container .journe-block .description {
+    text-align: center; }
+  .how-it-work-container .journe-block .img-wrap .img-lg {
+    display: none; }
+  .how-it-work-container .journe-block .img-wrap img {
+    left: 50%;
+    position: relative;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); }
+  .faq-container .card {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important; }
+    .faq-container .card button[aria-expanded="false"] {
+      color: gray !important;
+      font-size: 15px; } }
 
 @media screen and (min-width: 500px) and (max-width: 767px) {
   .mobile-curve, .step-marker, .journey__track, .track {
@@ -359,24 +420,23 @@ body footer .big-logo-wrap .logo-brand-text {
   .single-btn-container button {
     width: 40% !important; } }
 
-@media screen and (min-width: 768px) and (max-width: 1005px) {
-  .block-main .block-cap {
-    max-height: 727px; }
-    .block-main .block-cap .img-man img {
-      width: 450px !important;
-      margin-top: 30px; }
-    .block-main .block-cap .btn-block {
-      -webkit-justify-content: space-around;
-          -ms-flex-pack: distribute;
-              justify-content: space-around; }
-  .single-btn-container button {
-    width: 40% !important; } }
+@media screen and (min-width: 390px) and (max-width: 500px) {
+  .block-main .block-cap .title .rx {
+    display: inherit !important; }
+  .block-main .img-man img {
+    margin-top: -7px; }
+  .specialist-container .hico-text-wrap img {
+    position: relative;
+    top: 15px; }
+  .specialist-container .hico-text-wrap span {
+    margin-left: 25px !important; } }
 
-@media screen and (max-width: 390px) {
+@media screen and (min-width: 345px) and (max-width: 390px) {
   .block-main .block-cap {
-    max-height: 580px; }
+    max-height: 547px; }
     .block-main .block-cap .img-man img {
-      width: 330px !important; }
+      width: 330px !important;
+      margin-top: -7px; }
     .block-main .block-cap .choose-block .choose-item {
       padding: 10px;
       max-height: 65px !important; }
@@ -390,11 +450,8 @@ body footer .big-logo-wrap .logo-brand-text {
     font-size: 1.3rem !important; }
     .block-second .desc-block .desc-f a, .block-second .desc-block .desc-b a, .block-second .desc-block .desc-fl a {
       font-size: 1.3rem !important; }
-  .how-it-work-container .img-wrap .img-lg {
-    display: none; }
-  .faq-container .card .btn {
-    color: gray !important;
-    font-size: 15px; }
+  .specialist-container .hico-text-wrap span {
+    margin-left: 35px !important; }
   footer .footer-col {
     margin-top: 0 !important;
     position: relative; }
@@ -406,3 +463,9 @@ body footer .big-logo-wrap .logo-brand-text {
     top: 60px; }
   footer .third-col {
     bottom: 92px; } }
+
+@media screen and (max-width: 345px) {
+  .block-main .block-cap {
+    max-height: 524px; }
+    .block-main .block-cap .img-man img {
+      width: 280px !important; } }

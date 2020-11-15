@@ -64,14 +64,13 @@ const menuHandler = () => {
 
     })
 
-    $('.mobile-menu li, section').on('touchend', () =>  {
+    $('.mobile-menu li, section').on('touchend', () => {
         $mobileMenu.css({'height': 0});
         $burger.removeClass('open');
         setTimeout(() => {
             $mobileMenu.css({'opacity': 0}).removeClass('process');
         }, 500)
     })
-
 
 
 }
@@ -87,7 +86,7 @@ const stepAnimationInit = () => {
         .addTo(controller)
         .on("progress", function (e) {
             let h = e.progress.toFixed(3) * $('#journeyTrack').height();
-            $('.journey-timeline .track').height(h-190);
+            $('.journey-timeline .track').height(h - 190);
         }).on('end', function (e) {
         $('.journey-timeline .track').height($('#journeyTrack').height());
     });
@@ -111,26 +110,26 @@ const stepAnimationInit = () => {
 
 const tarifSelectHandler = () => {
     const formData = {
-        tarigType:'',
-        tarifLength:'',
-        promo:''
+        tarigType: '',
+        tarifLength: '',
+        promo: ''
     }
     $('.tarif-length-select-control-button-wrap .choose').on('click', function () {
         const $tarifLengthSelectWrap = $(this).parents('.tarif-body').find('.tarif-length-select-wrap');
         //высчитываем высоту для анимации
-        $tarifLengthSelectWrap.css('height','auto');
+        $tarifLengthSelectWrap.css('height', 'auto');
         const h = $tarifLengthSelectWrap.prop('offsetHeight');
-        $tarifLengthSelectWrap.css('height',0);
+        $tarifLengthSelectWrap.css('height', 0);
 
 
         $tarifLengthSelectWrap.addClass('choosen');
         $tarifLengthSelectWrap.animate({
-            'height':h,
-        },300);
+            'height': h,
+        }, 300);
     });
 
     //выбор тарифа, переход ко второму шагу
-    $('.tarif-length-select-control-button-wrap .continue').on('click',function () {
+    $('.tarif-length-select-control-button-wrap .continue').on('click', function () {
         //если необходимо, здесь можно менять get параметы и uri страницы
         const $tarifBody = $(this).parents('.tarif-body');
         const $radio = $tarifBody.find('input[type="radio"]:checked');
@@ -139,17 +138,16 @@ const tarifSelectHandler = () => {
         $('.step-2').addClass('active');
 
         formData.tarigType = $radio.attr('name');
-        formData.tarifLength =  $radio.val();
+        formData.tarifLength = $radio.val();
     });
 
-    $('.continue-pay-block button').on('click',function () {
+    $('.continue-pay-block button').on('click', function () {
         $('.step-2').removeClass('active').addClass('completed');
         $('.step-3').addClass('active');
     })
 
 
-
-    $('.pay').on('click',function () {
+    $('.pay').on('click', function () {
         $('.step-3').removeClass('active');
         $('.steps-wrap').hide();
         $('.step-4').addClass('active');
@@ -157,9 +155,14 @@ const tarifSelectHandler = () => {
 
 
     //step-3
-    $('.card-number').inputmask({ mask: ["4999 9999 9999 9999", "5999 9999 9999 9999", "6999 9999 9999 9999", "3999 999999 99999"], greedy: false, "placeholder": "*","keepStatic": false })
-    $('.card-date').inputmask({ mask: [99+'/'+99], "placeholder": "_", });
-    $('.card-cvv').inputmask({ mask: [999], "placeholder": "", });
+    $('.card-number').inputmask({
+        mask: ["4999 9999 9999 9999", "5999 9999 9999 9999", "6999 9999 9999 9999", "3999 999999 99999"],
+        greedy: false,
+        "placeholder": "*",
+        "keepStatic": false
+    })
+    $('.card-date').inputmask({mask: [99 + '/' + 99], "placeholder": "_",});
+    $('.card-cvv').inputmask({mask: [999], "placeholder": "",});
     let current_year = new Date().getFullYear();
 }
 
@@ -199,50 +202,52 @@ $(document).ready(function () {
 
 $(document).ready(() => {
     $('.faq-container a').click((e) => {
-      e.preventDefault()
+        e.preventDefault()
     })
 
     const width = window.innerWidth > 768 ? 70 : 140
     const isMobile = window.innerWidth <= 1005
     $('.btn-block').hover(() => $('.desc-block-col').css({'height': `${width}px`, opacity: 1}), () =>
-        $('.choose-block').on('mouseleave', () =>  $('.desc-block-col').css({'height':'0px', opacity: 0})))
+        $('.choose-block').on('mouseleave', () => $('.desc-block-col').css({'height': '0px', opacity: 0})))
     $('.choose-item, .triangle-part').on('mouseover', (e) => byOver(e, 1))
-    $('.choose-item, .triangle-part').on('mouseleave',(e) =>  byOver(e))
+    $('.choose-item, .triangle-part').on('mouseleave', (e) => byOver(e))
 
-    function byOver(e, opacityValue = 0 ) {
+    function byOver(e, opacityValue = 0) {
         let elem = $(e.target)
-        if(!elem.attr('data-target')) {
+        if (!elem.attr('data-target')) {
             elem = elem.parent('.choose-item').data('target')
         } else elem = elem.data('target')
         console.log('element is::', elem)
-        $(elem).css({ opacity: 1})
-         if(!opacityValue) $('#desc-reception-bx, #desc-reception-a').css({ opacity: 0});
+        $(elem).css({opacity: 1})
+        if (!opacityValue) $('#desc-reception-bx, #desc-reception-a').css({opacity: 0});
     }
 
 
-   // $('.choose-item').focus((e) =>  isMobile ?? showElemMobile(e) )
-    const showElemMobile =  (e) => {
+    // $('.choose-item').focus((e) =>  isMobile ?? showElemMobile(e) )
+    const showElemMobile = (e) => {
         const elem = $(e.target).data('target')
         if (elem.indexOf('bx') >= 0) {
-            $('#desc-reception-a').animate({ opacity: 0}, 0)
-        } else  $('#desc-reception-bx').animate({ opacity: 0}, 0)
-        $(elem).animate({ opacity: 1}, 250)
-        $(".block-second").animate({ "marginTop": 680}, 50)
+            $('#desc-reception-a').animate({opacity: 0}, 0)
+        } else $('#desc-reception-bx').animate({opacity: 0}, 0)
+        $(elem).animate({opacity: 1}, 250)
+        $(".block-second").animate({"marginTop": 680}, 50)
     }
 
 
-    
+        if (window.innerWidth > 1005) {
+            $(".faq-container .collapse").each(function (index) {
+                $(this).addClass('show')
+            });
+            $(".faq-container .btn.btn-link").each(function (index) {
+                $(this).attr('aria-expanded', 'true')
+            });
+        }
 
-    if (window.innerWidth > 578) {
-        $( ".faq-container .collapse" ).each(function( index ) {
-            $(this).addClass('show')
-        });
-    }
     $(document).on('click', 'a[href^="#"]', function (event) {
         event.preventDefault();
 
         $('html, body').animate({
-            scrollTop: $($.attr(this, 'href')).offset().top-70
+            scrollTop: $($.attr(this, 'href')).offset().top - 70
         }, 500);
     });
 
