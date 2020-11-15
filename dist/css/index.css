@@ -95,6 +95,8 @@ body .block-main {
                     box-shadow: -10px 20px 25px lightgray; }
             body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item:hover .triangle-part {
               opacity: 1; }
+          body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item.active .triangle-part {
+            opacity: 1 !important; }
       body .block-main .block-cap .container .b-left .choose-block .desc-block-col {
         -webkit-transition: height 0.7s linear;
         -o-transition: height 0.7s linear;
@@ -157,6 +159,9 @@ body .block-second {
   z-index: 99;
   padding-top: 80px;
   margin-bottom: 80px; }
+  @media screen and (min-width: 990px) and (max-width: 1200px) {
+    body .block-second .container .block-f .desc-f, body .block-second .container .block-f .desc-b, body .block-second .container .block-f .desc-fl {
+      font-size: 15px !important; } }
   body .block-second .container .block-f .b-left .title-block {
     font-size: 30px;
     text-transform: uppercase; }
@@ -275,11 +280,11 @@ body footer .big-logo-wrap .logo-brand-text {
                       box-shadow: none !important; }
               .block-main .block-cap .b-left .choose-block .btn-block .choose-item .triangle-part {
                 left: 45%; }
-              .block-main .block-cap .b-left .choose-block .btn-block .choose-item:hover, .block-main .block-cap .b-left .choose-block .btn-block .choose-item:focus, .block-main .block-cap .b-left .choose-block .btn-block .choose-item:active {
+              .block-main .block-cap .b-left .choose-block .btn-block .choose-item:hover, .block-main .block-cap .b-left .choose-block .btn-block .choose-item:focus, .block-main .block-cap .b-left .choose-block .btn-block .choose-item:active, .block-main .block-cap .b-left .choose-block .btn-block .choose-item.active {
                 background: white !important;
                 -webkit-box-shadow: 0 10px 25px lightgrey !important;
                         box-shadow: 0 10px 25px lightgrey !important; }
-                .block-main .block-cap .b-left .choose-block .btn-block .choose-item:hover .triangle-part, .block-main .block-cap .b-left .choose-block .btn-block .choose-item:focus .triangle-part, .block-main .block-cap .b-left .choose-block .btn-block .choose-item:active .triangle-part {
+                .block-main .block-cap .b-left .choose-block .btn-block .choose-item:hover .triangle-part, .block-main .block-cap .b-left .choose-block .btn-block .choose-item:focus .triangle-part, .block-main .block-cap .b-left .choose-block .btn-block .choose-item:active .triangle-part, .block-main .block-cap .b-left .choose-block .btn-block .choose-item.active .triangle-part {
                   display: inherit;
                   height: 10px;
                   width: 20px;
@@ -310,7 +315,7 @@ body footer .big-logo-wrap .logo-brand-text {
   #o_nas {
     position: relative;
     z-index: 2;
-    margin-top: 470px;
+    margin-top: 670px;
     -webkit-transition: margin-top 0.7s linear;
     -o-transition: margin-top 0.7s linear;
     transition: margin-top 0.7s linear; }
@@ -380,11 +385,16 @@ body footer .big-logo-wrap .logo-brand-text {
     .single-btn-container button {
       margin-bottom: 20px;
       width: 70% !important;
-      padding: 20px !important; } }
+      padding: 20px !important; }
+  #regModal .modal-body {
+    height: auto;
+    margin-top: 45px; } }
 
 @media screen and (min-width: 768px) and (max-width: 990px) {
   .block-main .block-cap {
     max-height: 727px; }
+    .block-main .block-cap .btn-choose {
+      margin-top: 70px !important; }
     .block-main .block-cap .img-man img {
       width: 450px !important;
       margin-top: 18px; }
@@ -392,6 +402,8 @@ body footer .big-logo-wrap .logo-brand-text {
       -webkit-justify-content: space-around;
           -ms-flex-pack: distribute;
               justify-content: space-around; }
+  .block-second {
+    margin-top: 450px !important; }
   .single-btn-container button {
     width: 40% !important; } }
 
@@ -410,13 +422,20 @@ body footer .big-logo-wrap .logo-brand-text {
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%); }
+  .faq-container h3 {
+    font-size: 30px; }
+  .faq-container .desc-tab {
+    font-size: 18px; }
   .faq-container .card {
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
     padding-top: 0 !important; }
     .faq-container .card button[aria-expanded="false"] {
       color: gray !important;
-      font-size: 15px; } }
+      font-size: 15px; }
+  .faq-container .card-body {
+    padding: 0 !important;
+    font-size: 1.1rem; } }
 
 @media screen and (min-width: 500px) and (max-width: 767px) {
   .mobile-curve, .step-marker, .journey__track, .track {
@@ -457,7 +476,7 @@ body footer .big-logo-wrap .logo-brand-text {
     max-height: 547px; }
     .block-main .block-cap .img-man img {
       width: 330px !important;
-      margin-top: -7px; }
+      margin-top: -41px; }
     .block-main .block-cap .choose-block .choose-item {
       padding: 10px;
       max-height: 65px !important; }

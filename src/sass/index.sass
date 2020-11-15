@@ -77,6 +77,7 @@ body
             img
               width: 350px
               position: relative
+
           .title
             margin-bottom: 40px
 
@@ -127,7 +128,9 @@ body
                   & .triangle-part
                     opacity: 1
 
-
+                &.active
+                  .triangle-part
+                    opacity: 1 !important
 
             .desc-block-col
               transition: height 0.7s linear
@@ -190,6 +193,10 @@ body
 
     .container
       .block-f
+        @media screen and (min-width: 990px) and (max-width: 1200px)
+          .desc-f, .desc-b, .desc-fl
+            font-size: 15px !important
+
         .b-left
           .title-block
             font-size: 30px
@@ -328,7 +335,7 @@ body
               & .triangle-part
                 left: 45%
 
-              &:hover, &:focus, &:active
+              &:hover, &:focus, &:active, &.active
                 background: white !important
                 box-shadow: 0 10px 25px lightgrey !important
 
@@ -338,6 +345,7 @@ body
                   width: 20px
                   top: 5px !important
                   border-width: 20px 15px 0 15px !important
+
 
               p
                 align-self: center
@@ -354,19 +362,23 @@ body
             font-size: 19px !important
             left: 50%
             transform: translateX(-50%)
+
             .btn-choose
               position: absolute
               z-index: 99999 !important
+
       .b-right
         display: none !important
   #o_nas
     position: relative
     z-index: 2
-    margin-top: 470px
+    margin-top: 670px
     transition: margin-top 0.7s linear
+
     .block-f
       padding-top: 40px
       border-top: 1.5px solid lightgrey
+
     .title-block
       text-align: center
 
@@ -454,11 +466,18 @@ body
       margin-bottom: 20px
       width: 70% !important
       padding: 20px !important
+  #regModal
+    .modal-body
+      height: auto
+      margin-top: 45px
 
 @media screen and (min-width: 768px) and (max-width: 990px)
   .block-main
     .block-cap
       max-height: 727px
+
+      .btn-choose
+        margin-top: 70px !important
 
       .img-man
         img
@@ -467,6 +486,8 @@ body
 
       .btn-block
         justify-content: space-around
+  .block-second
+    margin-top: 450px !important
   .single-btn-container
     button
       width: 40% !important
@@ -494,6 +515,12 @@ body
   .faq-container
     //.btn.btn-link[aria-expended="true"]
       color: $brandColor
+    h3
+      font-size: 30px
+
+    .desc-tab
+      font-size: 18px
+
     .card
       margin-bottom: 0 !important
       padding-bottom: 0 !important
@@ -502,6 +529,10 @@ body
       button[aria-expanded="false"]
         color: gray !important
         font-size: 15px
+
+    .card-body
+      padding: 0 !important
+      font-size: 1.1rem
 
 @media screen and (min-width: 500px) and (max-width: 767px)
   .mobile-curve, .step-marker, .journey__track, .track
@@ -516,6 +547,7 @@ body
 
       .btn-block
         justify-content: space-around
+
       .choose-item
         max-height: 70px !important
   .single-btn-container
@@ -529,14 +561,18 @@ body
       .title
         .rx
           display: inherit !important
+
     .choose-block
       .choose-item
         max-height: 65px !important
+
         .triangle-part
           left: 37% !important
+
         p
           font-size: 19px !important
           line-height: 1.2
+
     .img-man
       img
         margin-top: -7px
@@ -557,20 +593,21 @@ body
       .img-man
         img
           width: 330px !important
-          margin-top: -7px
+          margin-top: -41px
 
       .choose-block
         .choose-item
           padding: 10px
           max-height: 65px !important
+
           .triangle-part
             left: 37% !important
+
           p
             font-size: 19px !important
             line-height: 1.2
 
   .block-second
-
     .desc-block
       .desc-f, .desc-b, .desc-fl
         font-size: 1.3rem !important
@@ -583,6 +620,7 @@ body
       img
         position: relative
         top: 15px
+
       span
         margin-left: 35px !important
   footer
@@ -601,10 +639,12 @@ body
 
     .third-col
       bottom: 92px
+
 @media screen and (max-width: 345px)
   .block-main
     .block-cap
       max-height: 524px
+
       .img-man
         img
           width: 280px !important

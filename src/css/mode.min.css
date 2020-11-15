@@ -426,7 +426,7 @@ h6 {
     text-decoration: none
 }
 
-@media only screen and (min-width: 450px) and (max-width: 767px) {
+@media only screen and (min-width: 250px) and (max-width: 767px) {
     #accordion .card .card-header, #accordion .card .card-header .btn {
         font-size: 18px;
         color: #2cc0a7 ;

@@ -5,21 +5,21 @@ const headerFixer = (scrollEvent) => {
     const $topline = $('.topline');
     const isTopLine = ($topline.length);
     const $header = $('header');
-    if (curScroll > 50) {
-        $header.addClass('fixed');
-        $('body').addClass('header-fixed');
-        if (isTopLine) {
-            $topline.addClass('fixed');
-            $header.css('top', $topline.prop('offsetHeight'));
+        if (curScroll > 50) {
+            $header.addClass('fixed');
+            $('body').addClass('header-fixed');
+            if (isTopLine) {
+                $topline.addClass('fixed');
+                $header.css('top', $topline.prop('offsetHeight'));
+            }
+            return;
         }
-        return;
-    }
-    if (isTopLine) {
-        $topline.removeClass('fixed');
-        $header.css('top', 0);
-    }
-    $('body').removeClass('header-fixed');
-    $header.removeClass('fixed');
+        if (isTopLine) {
+            $topline.removeClass('fixed');
+            $header.css('top', 0);
+        }
+        $('body').removeClass('header-fixed');
+        $header.removeClass('fixed');
 }
 
 
@@ -35,6 +35,7 @@ const subscribeHeadCorrection = () => {
     });
 }
 const onResize = () => {
+
     subscribeHeadCorrection();
 }
 
@@ -201,27 +202,44 @@ $(document).ready(function () {
 })
 
 $(document).ready(() => {
+
+
     $('.faq-container a').click((e) => {
         e.preventDefault()
     })
 
     const width = window.innerWidth > 768 ? 70 : 140
     const isMobile = window.innerWidth <= 1005
-    $('.btn-block').hover(() => $('.desc-block-col').css({'height': `${width}px`, opacity: 1}), () =>
-        $('.choose-block').on('mouseleave', () => $('.desc-block-col').css({'height': '0px', opacity: 0})))
+    $('#desc-reception-bx').css({opacity: 1})
+    if (isMobile) {
+        $('.btn-choose').css({marginTop: 140})
+    } else {
+        $('.btn-choose').css({marginTop: 70})
+    }
+    if (!isMobile) {
+       // $('.btn-block').hover(() => $('.desc-block-col').css({ opacity: 1}), () =>
+        //    $('.choose-block').on('mouseleave', () => $('.desc-block-col').css({'height': '0px', opacity: 0})))
+    }
+
     $('.choose-item, .triangle-part').on('mouseover', (e) => byOver(e, 1))
-    $('.choose-item, .triangle-part').on('mouseleave', (e) => byOver(e))
+    //$('.choose-item, .triangle-part').on('mouseleave', (e) => byOver(e))
 
     function byOver(e, opacityValue = 0) {
+
         let elem = $(e.target)
+        let parent = elem
+
         if (!elem.attr('data-target')) {
+            parent= elem.parent('.choose-item')
             elem = elem.parent('.choose-item').data('target')
         } else elem = elem.data('target')
-        if (isMobile) {
-            $(".block-second").css({"marginTop": opacityValue ? 620 : 470})
-        }
+
+        $('#desc-reception-bx, #desc-reception-a').css({opacity: 0});
+        $('.choose-item').removeClass('active')
+        parent.addClass('active')
+
         $(elem).css({opacity: 1})
-        if (!opacityValue) $('#desc-reception-bx, #desc-reception-a').css({opacity: 0});
+        //if (!opacityValue) $('#desc-reception-bx, #desc-reception-a').css({opacity: 0});
     }
 
 
@@ -243,7 +261,12 @@ $(document).ready(() => {
         $(".faq-container .btn.btn-link").each(function (index) {
             $(this).attr('aria-expanded', 'true')
         });
+    } else {
+        let fc =  $("#collapse-0")
+        fc.siblings('.card-header').find('.btn').attr('aria-expanded', 'true')
+        fc.removeClass('collapse') .addClass('collapsed show')
     }
+
 
     $(document).on('click', 'a[href^="#"]', function (event) {
         event.preventDefault();
