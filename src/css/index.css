@@ -75,6 +75,9 @@ body .block-main {
           transition: box-shadow 0.5s ease-in-out, -webkit-box-shadow 0.5s ease-in-out; }
           body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item p {
             font-size: 19px; }
+            @media screen and (min-width: 990px) {
+              body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item p br {
+                display: none !important; } }
           body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item .triangle-part {
             height: 10px;
             position: relative;
@@ -87,10 +90,10 @@ body .block-main {
             -webkit-transition: opacity 0.5s ease-in-out;
             -o-transition: opacity 0.5s ease-in-out;
             transition: opacity 0.5s ease-in-out; }
-          body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item:hover, body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item:focus, body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item:focus {
+          body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item:hover {
             -webkit-box-shadow: -10px 20px 25px lightgray;
                     box-shadow: -10px 20px 25px lightgray; }
-            body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item:hover .triangle-part, body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item:focus .triangle-part, body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item:focus .triangle-part {
+            body .block-main .block-cap .container .b-left .choose-block .btn-block .choose-item:hover .triangle-part {
               opacity: 1; }
       body .block-main .block-cap .container .b-left .choose-block .desc-block-col {
         -webkit-transition: height 0.7s linear;
@@ -264,14 +267,14 @@ body footer .big-logo-wrap .logo-brand-text {
             display: -ms-flexbox;
             display: flex; }
             .block-main .block-cap .b-left .choose-block .btn-block .choose-item {
-              max-height: 70px;
+              max-height: 70px !important;
               border-radius: 15px;
               width: 48%;
               background: #eff1f4 !important;
               -webkit-box-shadow: none !important;
                       box-shadow: none !important; }
               .block-main .block-cap .b-left .choose-block .btn-block .choose-item .triangle-part {
-                left: 37%; }
+                left: 45%; }
               .block-main .block-cap .b-left .choose-block .btn-block .choose-item:hover, .block-main .block-cap .b-left .choose-block .btn-block .choose-item:focus, .block-main .block-cap .b-left .choose-block .btn-block .choose-item:active {
                 background: white !important;
                 -webkit-box-shadow: 0 10px 25px lightgrey !important;
@@ -286,7 +289,8 @@ body footer .big-logo-wrap .logo-brand-text {
                 -webkit-align-self: center;
                     -ms-flex-item-align: center;
                         align-self: center;
-                margin-bottom: 0; }
+                margin-bottom: 0;
+                line-height: 1.2; }
               .block-main .block-cap .b-left .choose-block .btn-block .choose-item span {
                 display: none; }
           .block-main .block-cap .b-left .choose-block .desc-reception {
@@ -298,13 +302,21 @@ body footer .big-logo-wrap .logo-brand-text {
             -webkit-transform: translateX(-50%);
                 -ms-transform: translateX(-50%);
                     transform: translateX(-50%); }
+            .block-main .block-cap .b-left .choose-block .desc-reception .btn-choose {
+              position: absolute;
+              z-index: 99999 !important; }
       .block-main .block-cap .b-right {
         display: none !important; }
   #o_nas {
-    margin-top: 400px;
-    -webkit-transition: margin-top 1s linear;
-    -o-transition: margin-top 1s linear;
-    transition: margin-top 1s linear; }
+    position: relative;
+    z-index: 2;
+    margin-top: 470px;
+    -webkit-transition: margin-top 0.7s linear;
+    -o-transition: margin-top 0.7s linear;
+    transition: margin-top 0.7s linear; }
+    #o_nas .block-f {
+      padding-top: 40px;
+      border-top: 1.5px solid lightgrey; }
     #o_nas .title-block {
       text-align: center; }
     #o_nas .desc-block {
@@ -417,12 +429,21 @@ body footer .big-logo-wrap .logo-brand-text {
     -webkit-justify-content: space-around;
         -ms-flex-pack: distribute;
             justify-content: space-around; }
+  .block-main .block-cap .choose-item {
+    max-height: 70px !important; }
   .single-btn-container button {
     width: 40% !important; } }
 
 @media screen and (min-width: 390px) and (max-width: 500px) {
   .block-main .block-cap .title .rx {
     display: inherit !important; }
+  .block-main .choose-block .choose-item {
+    max-height: 65px !important; }
+    .block-main .choose-block .choose-item .triangle-part {
+      left: 37% !important; }
+    .block-main .choose-block .choose-item p {
+      font-size: 19px !important;
+      line-height: 1.2; }
   .block-main .img-man img {
     margin-top: -7px; }
   .specialist-container .hico-text-wrap img {
@@ -440,16 +461,18 @@ body footer .big-logo-wrap .logo-brand-text {
     .block-main .block-cap .choose-block .choose-item {
       padding: 10px;
       max-height: 65px !important; }
+      .block-main .block-cap .choose-block .choose-item .triangle-part {
+        left: 37% !important; }
       .block-main .block-cap .choose-block .choose-item p {
-        font-size: 18px !important;
+        font-size: 19px !important;
         line-height: 1.2; }
-  .block-second .block-f {
-    padding-top: 40px;
-    border-top: 1.5px solid lightgrey; }
   .block-second .desc-block .desc-f, .block-second .desc-block .desc-b, .block-second .desc-block .desc-fl {
     font-size: 1.3rem !important; }
     .block-second .desc-block .desc-f a, .block-second .desc-block .desc-b a, .block-second .desc-block .desc-fl a {
       font-size: 1.3rem !important; }
+  .specialist-container .hico-text-wrap img {
+    position: relative;
+    top: 15px; }
   .specialist-container .hico-text-wrap span {
     margin-left: 35px !important; }
   footer .footer-col {

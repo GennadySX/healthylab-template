@@ -105,6 +105,10 @@ body
 
                 p
                   font-size: 19px
+                  @media screen and (min-width: 990px)
+                    br
+                      display: none !important
+
 
                 & .triangle-part
                   height: 10px
@@ -117,11 +121,12 @@ body
                   opacity: 0
                   transition: opacity 0.5s ease-in-out
 
-                &:hover, &:focus, &:focus
+                &:hover
                   box-shadow: -10px 20px 25px lightgray
 
                   & .triangle-part
                     opacity: 1
+
 
 
             .desc-block-col
@@ -314,14 +319,14 @@ body
             display: flex
 
             .choose-item
-              max-height: 70px
+              max-height: 70px !important
               border-radius: 15px
               width: 48%
               background: #eff1f4 !important
               box-shadow: none !important
 
               & .triangle-part
-                left: 37%
+                left: 45%
 
               &:hover, &:focus, &:active
                 background: white !important
@@ -334,10 +339,10 @@ body
                   top: 5px !important
                   border-width: 20px 15px 0 15px !important
 
-
               p
                 align-self: center
                 margin-bottom: 0
+                line-height: 1.2
 
               span
                 display: none
@@ -349,13 +354,19 @@ body
             font-size: 19px !important
             left: 50%
             transform: translateX(-50%)
-
+            .btn-choose
+              position: absolute
+              z-index: 99999 !important
       .b-right
         display: none !important
   #o_nas
-    margin-top: 400px
-    transition: margin-top 1s linear
-
+    position: relative
+    z-index: 2
+    margin-top: 470px
+    transition: margin-top 0.7s linear
+    .block-f
+      padding-top: 40px
+      border-top: 1.5px solid lightgrey
     .title-block
       text-align: center
 
@@ -505,7 +516,8 @@ body
 
       .btn-block
         justify-content: space-around
-
+      .choose-item
+        max-height: 70px !important
   .single-btn-container
     button
       width: 40% !important
@@ -517,6 +529,14 @@ body
       .title
         .rx
           display: inherit !important
+    .choose-block
+      .choose-item
+        max-height: 65px !important
+        .triangle-part
+          left: 37% !important
+        p
+          font-size: 19px !important
+          line-height: 1.2
     .img-man
       img
         margin-top: -7px
@@ -543,15 +563,13 @@ body
         .choose-item
           padding: 10px
           max-height: 65px !important
-
+          .triangle-part
+            left: 37% !important
           p
-            font-size: 18px !important
+            font-size: 19px !important
             line-height: 1.2
 
   .block-second
-    .block-f
-      padding-top: 40px
-      border-top: 1.5px solid lightgrey
 
     .desc-block
       .desc-f, .desc-b, .desc-fl
@@ -562,6 +580,9 @@ body
 
   .specialist-container
     .hico-text-wrap
+      img
+        position: relative
+        top: 15px
       span
         margin-left: 35px !important
   footer

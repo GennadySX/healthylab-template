@@ -217,7 +217,9 @@ $(document).ready(() => {
         if (!elem.attr('data-target')) {
             elem = elem.parent('.choose-item').data('target')
         } else elem = elem.data('target')
-        console.log('element is::', elem)
+        if (isMobile) {
+            $(".block-second").css({"marginTop": opacityValue ? 620 : 470})
+        }
         $(elem).css({opacity: 1})
         if (!opacityValue) $('#desc-reception-bx, #desc-reception-a').css({opacity: 0});
     }
@@ -234,14 +236,14 @@ $(document).ready(() => {
     }
 
 
-        if (window.innerWidth > 1005) {
-            $(".faq-container .collapse").each(function (index) {
-                $(this).addClass('show')
-            });
-            $(".faq-container .btn.btn-link").each(function (index) {
-                $(this).attr('aria-expanded', 'true')
-            });
-        }
+    if (window.innerWidth > 1005) {
+        $(".faq-container .collapse").each(function (index) {
+            $(this).addClass('show')
+        });
+        $(".faq-container .btn.btn-link").each(function (index) {
+            $(this).attr('aria-expanded', 'true')
+        });
+    }
 
     $(document).on('click', 'a[href^="#"]', function (event) {
         event.preventDefault();
