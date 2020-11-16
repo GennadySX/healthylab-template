@@ -60,7 +60,7 @@ const menuHandler = () => {
             $burger.removeClass('open');
             setTimeout(() => {
                 $mobileMenu.css({'opacity': 0}).removeClass('process');
-            }, 500)
+            }, 30)
         }
 
     })
@@ -274,6 +274,14 @@ $(document).ready(() => {
         $('html, body').animate({
             scrollTop: $($.attr(this, 'href')).offset().top - 70
         }, 500);
+        if (window.innerWidth < 1005) {
+            let burger = $('.js-burger');
+            let jsMenu = $('.js-mobile-menu');
+            if(burger.hasClass('open')) {
+                burger.removeClass('open')
+                jsMenu.removeClass('process').css({height: 0, opacity: 0})
+            }
+        }
     });
 
 
