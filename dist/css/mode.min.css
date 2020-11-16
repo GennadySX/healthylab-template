@@ -1863,7 +1863,7 @@ header {
 }
 
 header:not(.darkblue) {
-    border-bottom: 1px solid #e6e6e6;
+    background: #f6f7f8;
     margin-bottom: 33px
 }
 

@@ -204,7 +204,7 @@ $(document).ready(function () {
 $(document).ready(() => {
 
 
-    $('.faq-container a').click((e) => {
+    $('.faq-container a').not('.linkly').click((e) => {
         e.preventDefault()
     })
 
@@ -284,6 +284,20 @@ $(document).ready(() => {
         }
     });
 
+
+
+        $(document).on('click', 'a[class^="smooth-down"]', function (event) {
+            $('#faq-comments').trigger('click')
+            if (window.innerWidth > 1005) {
+                $('#v-pills-async-tab').trigger('click')
+            } else {
+            setTimeout(() => {
+                $('#async-comments').trigger('click')
+            }, 500)
+
+            }
+
+        })
 
     $('.limitly-link-pill').on('click', () => {
         $('#v-pills-not-discussion-tab').trigger('click')

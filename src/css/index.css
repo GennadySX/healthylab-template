@@ -506,6 +506,13 @@ body footer .big-logo-wrap .logo-brand-text {
   footer .third-col {
     bottom: 92px; } }
 
+@media screen and (min-width: 370px) and (max-width: 390px) {
+  .block-main .block-cap {
+    max-height: 547px; }
+    .block-main .block-cap .img-man img {
+      width: 330px !important;
+      margin-top: -7px; } }
+
 @media screen and (max-width: 345px) {
   .block-main .block-cap {
     max-height: 524px; }
