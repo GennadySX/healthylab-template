@@ -171,6 +171,8 @@ body .block-second {
     font-size: 17px; }
   body .block-second .container .block-f .b-left .desc-block .desc-fl {
     font-size: 18px; }
+    body .block-second .container .block-f .b-left .desc-block .desc-fl a {
+      font-size: 19px; }
   body .block-second .container .block-f .b-right {
     display: -webkit-box;
     display: -webkit-flex;
@@ -246,7 +248,7 @@ body footer .big-logo-wrap .logo-brand-text {
     height: unset !important; }
     .block-main .block-cap {
       height: unset !important;
-      max-height: 605px; }
+      max-height: 580px; }
       .block-main .block-cap .b-left {
         max-width: 100% !important;
         text-align: center;
@@ -392,7 +394,7 @@ body footer .big-logo-wrap .logo-brand-text {
 
 @media screen and (min-width: 768px) and (max-width: 990px) {
   .block-main .block-cap {
-    max-height: 727px; }
+    max-height: 690px; }
     .block-main .block-cap .btn-choose {
       margin-top: 70px !important; }
     .block-main .block-cap .img-man img {
@@ -454,8 +456,10 @@ body footer .big-logo-wrap .logo-brand-text {
     width: 40% !important; } }
 
 @media screen and (min-width: 390px) and (max-width: 500px) {
-  .block-main .block-cap .title .rx {
-    display: inherit !important; }
+  .block-main .block-cap {
+    max-height: 537px; }
+    .block-main .block-cap .title .rx {
+      display: inherit !important; }
   .block-main .choose-block .choose-item {
     max-height: 65px !important; }
     .block-main .choose-block .choose-item .triangle-part {
@@ -508,13 +512,17 @@ body footer .big-logo-wrap .logo-brand-text {
 
 @media screen and (min-width: 370px) and (max-width: 390px) {
   .block-main .block-cap {
-    max-height: 547px; }
+    max-height: 512px; }
     .block-main .block-cap .img-man img {
       width: 330px !important;
       margin-top: -7px; } }
 
+@media screen and (min-width: 345px) and (max-width: 370px) {
+  .block-main .block-cap {
+    max-height: 479px; } }
+
 @media screen and (max-width: 345px) {
   .block-main .block-cap {
-    max-height: 524px; }
+    max-height: 492px; }
     .block-main .block-cap .img-man img {
       width: 280px !important; } }
